@@ -340,6 +340,7 @@ section img {
     .container{
         margin-top: 10%;
         margin-left:3%;
+        width:100%;
     }
     .icerik{
         color: ivory;

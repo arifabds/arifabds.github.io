@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web sitesi</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    
+    <header name="ust">
+
+        <div name="divim" class="toggle"  onclick="toggleMenu();"></div>
+        
+        
+        <nav class="nav">
+            <ul>
+                <li><a  href="#" > Ana Sayfa</a></li>
+                <li ><a  href="#icerikkutusu1">Hakkımda</a></li>
+                <li><a  href="#isler">İşlerim</a></li>
+                <li><a  href="#footer">İletişim</a></li>
+            </ul>
+        </nav>
+
+        
+        
+    </header>
+
+    
+    
+
+    <section>
+
+        <ul onclick="menutik()"  class="menu" name="sırasız">
+            <li ><a  href="#" > Ana Sayfa</a></li>
+            <li ><a  href="#icerik">Hakkımda</a></li>
+            <li ><a  href="#isler">İşlerim</a></li>
+            <li ><a  href="#footer">İletişim</a></li>
+        </ul>
+
+        <img id="arkaplan">
+
+        <div class="text">
+            <h2 id="text"> Merhaba</h2>
+            <h3 id="text2">Ben Arif Emre</h3>
+        </div>
+
+
+        
+    </section>
+    
+    <script>
+        function menu(){
+            var menuToggle = document.querySelector('.toggle');
+            menuToggle.classList.toggle('active')
+        }
+    </script>
+
+    <script type="text/javascript">
+        window.addEventListener('scroll',function(){
+            var header = document.querySelector('header');
+            header.classList.toggle('sticky' , window.scrollY > 525);
+        });
+
+        function toggleMenu(){
+            var menuToggle= document.querySelector('.toggle');
+            var menu= document.querySelector('.menu');  
+            menuToggle.classList.toggle('active');
+            menu.classList.toggle('active');
+           
+        }
+        function menutik(){
+            document.getElementsByName('sırasız')[0].className = "menu";
+            document.getElementsByName('ust')[0].className ="ustyok";
+            document.getElementsByName('divim')[0].className ="toggle"
+        }
+
+    </script>
+
+    <div id="container1" class="container">
+        <div id="icerik" class="icerik">
+            <div class="icerikkutusu" id="icerikkutusu1">
+                1897 yılında Fransa'nın Nice kentinde yaşayan Avusturyalı tüccar ve Avusturya Nice Başkonsolosu Emil
+                Jellinek, Daimler fabrikasını ziyaret ederek bir otomobil satın aldı. Uluslararası finans dünyası ve
+                aristokrasi ile iyi ilişkiler içinde olan Jellinek, Daimler otomobili ile Fransız Riviera'sında büyük
+                ilgi topladı. Daha sonra Jelinek 1899'da 23 beygir gücünde motorla donatılmış bir Daimler yarış
+                otomobiline büyük kızı Mercedes'in adını vererek bu araçla Nice'de bir yarışa katıldı ve birinci oldu.
+                Bu başarıdan sonra Jelinek, Daimler fabrikasına 36 otomobil sipariş verdi ve bu araçların "Mercedes"
+                adını taşımalarını şart koştu.
+
+                Emil Jelinek'in elde ettiği satış başarısı üzerine Daimler, 1901 yılından itibaren ürettiği araçları
+                "Mercedes" olarak adlandırmaya karar verdi. Mercedes İspanyolca konuşulan ülkelerde çok kullanılan bir
+                isimdir. Kelime olarak da Mars gezegeninin İspanyolca adıdır. Lütuf ve zarafet anlamına da gelmektedir.
+                23 Haziran 1902 tarihinde Mercedes marka adı olarak tescil edildi. 26 Eylül 1902 tarihinden itibaren de
+                kanunlarca koruma altına alındı.
+
+                Amblem
+                Şirketin kurucusu Karl Benz, Deutz'daki motor fabrikasındaki görevinin ilk yıllarında, Köln ve Deutz
+                manzaralı evinin tepesine bir yıldız amblemi koymuş, eşine yazdığı mektuplarda bu yıldızın günün birinde
+                başarıyı ve gücü temsil edeceğini ve fabrikasının üzerinde parlayacağını söylemişti. Yıldız Daimler'in,
+                motorlu araçların "karada, suda, havada" evrenselliğini simgelemektedir. 1909'da tescil edildi.
+
+                1916 yılında yıldızın etrafı, içinde dört küçük yıldızın ve Mercedes isminin yer aldığı bir daireye
+                çevrildi.
+
+                1926'da Daimler-Benz birleşmesi ile Benz'in defne yapraklarından çelengi yıldızın etrafını sardı.
+
+                Amblemleri1897 yılında Fransa'nın Nice kentinde yaşayan Avusturyalı tüccar ve Avusturya Nice
+                Başkonsolosu Emil Jellinek, Daimler fabrikasını ziyaret ederek bir otomobil satın aldı. Uluslararası
+                finans dünyası ve aristokrasi ile iyi ilişkiler içinde olan Jellinek, Daimler otomobili ile Fransız
+                Riviera'sında büyük ilgi topladı. Daha sonra Jelinek 1899'da 23 beygir gücünde motorla donatılmış bir
+                Daimler yarış otomobiline büyük kızı Mercedes'in adını vererek bu araçla Nice'de bir yarışa katıldı ve
+                birinci oldu. Bu başarıdan sonra Jelinek, Daimler fabrikasına 36 otomobil sipariş verdi ve bu araçların
+                "Mercedes" adını taşımalarını şart koştu.
+
+                Emil Jelinek'in elde ettiği satış başarısı üzerine Daimler, 1901 yılından itibaren ürettiği araçları
+                "Mercedes" olarak adlandırmaya karar verdi. Mercedes İspanyolca konuşulan ülkelerde çok kullanılan bir
+                isimdir. Kelime olarak da Mars gezegeninin İspanyolca adıdır. Lütuf ve zarafet anlamına da gelmektedir.
+                23 Haziran 1902 tarihinde Mercedes marka adı olarak tescil edildi. 26 Eylül 1902 tarihinden itibaren de
+                kanunlarca koruma altına alındı.
+
+                
+            </div>
+            <div class="icerikkutusu2">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur, 
+                assumenda? Possimus tempore, voluptate quae recusandae pariatur et dolorum magni voluptas cum, 
+                dolorem placeat hic, at itaque corporis deleniti similique. Dolore.
+            </div>
+
+            
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <footer>
+
+    </footer>
+
+
+</body>
+
+</html>

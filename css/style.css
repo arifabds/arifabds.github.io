@@ -337,6 +337,10 @@ section img {
     header.ustyok{
         background-color:none;
     }
+    .container{
+        margin-top: 10%;
+        margin-left:3%;
+    }
     
 }
 

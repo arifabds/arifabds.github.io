@@ -231,7 +231,7 @@ section img {
     top:0;
     border-radius: 3%;
     box-shadow: 3px 3px var(--color-1);
-    background: url(../assets/sertifika1.png);
+    background: url("https://globalaihub.com/wp-content/uploads/certificates/Arif-Emre-Abdusoglu-Makine-Ogrenmesi8217ne-Giris-Introduction-to-Machine-Learning-Global-AI-Hub.jpeg");
     position:relative;
     background-size: cover;
     background-position: center;   
@@ -239,9 +239,9 @@ section img {
     min-height:8.75rem;
     max-width:12.875rem;
     opacity:0.7;
-    transform:translateY(4em),rotateZ(-3deg);
-    transition: transform 4s 0.25s cubic-bezier(0,2,0.7,4),
-                opacity .5s .25s ease-out;
+    transform:translateY(2rem),rotateZ(-3deg);
+    transition: transform 4s 0.15s cubic-bezier(0,2,0.5,4),
+                opacity .5s .15s ease-out;
     will-change: transform, opacity;
     
     
@@ -256,7 +256,7 @@ section img {
     position:relative;
     background-size: cover;
     background-position: center;   
-    z-index:10000;
+    z-index:1;
     min-height:8.75rem;
     max-width:12.875rem;
     opacity:1;

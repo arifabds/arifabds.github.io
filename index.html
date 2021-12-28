@@ -12,6 +12,9 @@
 
 <body>
     
+    
+    
+    
     <header name="ust">
 
         <div name="divim" class="toggle"  onclick="toggleMenu();"></div>
@@ -64,11 +67,14 @@
         window.addEventListener('scroll',function(){
             var header = document.querySelector('header');
             header.classList.toggle('sticky' , window.scrollY > 555);
+            var foto1 = document.querySelector('.sertifika1');
+            foto1.classList.toggle('active' , window.scrollY > 555);
         });
+        
 
-        function toggleMenu(){
+        function toggleMenu(){       
             var menuToggle= document.querySelector('.toggle');
-            var menu= document.querySelector('.menu');  
+            var menu= document.querySelector('.menu');    
             menuToggle.classList.toggle('active');
             menu.classList.toggle('active');
            
@@ -96,11 +102,14 @@
                  Türkiye genelinde %2.8'lik dilime girip Bursa Uludağ Üniversitesi Bilgisayar Mühendisliği 
                  Lisans bölümüne yerleştim. Şuanda bu bölümde eğitim görmekteyim.
                 SERTİFİKALARIM:
+                <div name ="ilkfoto" class="sertifika1">
+                    <img id="sertifika1">
+                </div>
                 
                 
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur, assumenda? Possimus tempore, voluptate quae recusandae pariatur et dolorum magni voluptas cum, dolorem placeat hic, at itaque corporis deleniti similique. Dolore.
                 
             </div>
+            
             <div class="icerikkutusu2" id="icerikkutusu2">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur, 
                 assumenda? Possimus tempore, voluptate quae recusandae pariatur et dolorum magni voluptas cum, 

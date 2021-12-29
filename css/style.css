@@ -518,8 +518,8 @@ section img {
     }
 
     .toggle{
-        right:0;
-        top:0;
+        right:0%;
+        top:0%;
         margin:25px;
         position:fixed;
         width:40px;

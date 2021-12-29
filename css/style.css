@@ -386,6 +386,23 @@ section img {
     border-bottom-left-radius:20%;
 }
 
+.hobiler{
+    list-style-type:circle;
+}
+.hobilerim{
+    min-width: max-content;
+    justify-content: space-between;
+}
+.dillerim{
+    position:relative;
+    left:30%;
+    top:-6.5rem;
+    min-width:max-content;
+    justify-content: space-between;
+}
+.diller{
+    list-style-type:circle;
+}
 
 
 
@@ -529,6 +546,26 @@ section img {
         min-width:max-content;
         left:60%;
     }
+    .sertifika2{
+        top:-9rem;
+        height:60%;
+        width:60%;
+        min-height:8.75rem;
+        max-height:80%;
+        max-width:12.875rem;
+        min-width:max-content;
+        left:60%;
+    }
+
+    .sertifika1{
+        height:60%;
+        width:60%;
+        min-height:8.75rem;
+        max-height:80%;
+        max-width:12.875rem;
+        min-width:max-content;
+        left:-1rem;
+    }
     .sertifika1.active{
         height:60%;
         width:60%;
@@ -578,6 +615,20 @@ section img {
         position:relative;
         min-width: 10%;
         left:-4%;
+    }
+    
+
+    .hobiler{
+       font-size: smaller;
+    }
+    .dillerim{
+        margin-left:28%;
+        top:-6rem;
+        position:relative;
+    }
+    .diller{
+        font-size: smaller;
+
     }
 }
 

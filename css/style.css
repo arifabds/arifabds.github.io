@@ -322,6 +322,70 @@ section img {
     opacity:0.9;
 }
 
+.yeteneklerim{
+    top:-5rem;
+    position:relative;
+    
+}
+
+.ortak{
+    top:-1.5rem;
+    left:17%;
+    position:relative;
+    width:60%;
+    background-color: rgb(230, 220, 203);
+    border-radius:20%;
+}
+
+.problemcozme{
+    width:80%;
+    color:#2f3240;
+    font-weight: 600;
+    text-align:right;
+    background-color: rgb(199, 139, 61);
+    position:relative;
+    top:0;
+    left:0;
+    border-top-left-radius:20%;
+    border-bottom-left-radius:20%;
+}
+.zamanyonetimi{
+    color:#2f3240;
+    font-weight: 600;
+    width:50%;
+    text-align:right;
+    background-color: rgb(199, 139, 61);
+    position:relative;
+    top:0;
+    left:0;
+    border-top-left-radius:20%;
+    border-bottom-left-radius:20%;
+}
+.takimcalismasi{
+    color:#2f3240;
+    font-weight: 600;
+    width:60%;
+    text-align:right;
+    background-color: rgb(199, 139, 61);
+    position:relative;
+    top:0;
+    left:0;
+    border-top-left-radius:20%;
+    border-bottom-left-radius:20%;
+}
+.sorumluluk{
+    color:#2f3240;
+    font-weight: 600;
+    width:70%;
+    text-align:right;
+    background-color:rgb(199, 139, 61);
+    position:relative;
+    top:0;
+    left:0;
+    border-top-left-radius:20%;
+    border-bottom-left-radius:20%;
+}
+
 
 
 
@@ -474,6 +538,15 @@ section img {
         min-width:max-content;
         left:-1rem;
 
+    }
+    .ortak{
+        top:-1.4rem;
+        left:33%;
+        position:relative;
+        height:1rem;
+        width:60%;
+        background-color: rgb(230, 220, 203);
+        border-radius:20%;
     }
 }
 

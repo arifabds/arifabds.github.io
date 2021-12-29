@@ -405,15 +405,20 @@ section img {
     list-style-type:circle;
 }
 .icerikkutusu2{
-    margin-top: 5rem;
+    margin-top: 4rem;
+    margin-bottom:1rem;
     position:relative;
     left:40%;
 }
-
-.ilkis{
-    
+.header1{
+    margin-bottom:5rem;
 }
+
+
 .icinde{
+    position:relative;
+    top:-34rem;
+    left:-0.8%;
     padding-right:2rem;
     padding-left:2rem;
     margin:5px;
@@ -439,13 +444,18 @@ section img {
     transform:scale(0.9);
 }
 
-.ikinciis{
-
+.siteicinde{
+    position:relative;
+    top:1rem;
+    left:500%;
+}
+.siteicinde.active{
+    display:100%;
+    left:-35%;
+    transform:translateY(-3rem);
 }
 
-.ucuncuis{
 
-}
 
 
 
@@ -684,5 +694,34 @@ section img {
         font-size: smaller;
 
     }
+    
 }
+
+@media(max-width:555px){
+    .siteicinde.active{
+        position:relative;
+        left:-5rem;
+        top:-1rem;
+        height:300px; 
+        width:300px;
+        min-height:230px;
+        min-width:230px;
+    }
+    .icinde{
+        position:relative;
+        top:-4rem;
+        left:-0.5rem;
+    }
+
+    .icinde.active{
+        position:relative;
+        top:-5rem;
+
+    }
+}
+
+
+
+
+
 

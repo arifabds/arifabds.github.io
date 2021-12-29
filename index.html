@@ -87,7 +87,16 @@
             document.getElementsByName('divim')[0].className ="toggle"
         }
         function websitesi(){
-
+            var site = document.querySelector('.siteicinde');
+            site.classList.toggle('active');
+            var butonum = document.querySelector('.icinde');
+            butonum.classList.toggle('active');
+            var x = document.getElementById("acilir");
+            if (x.innerHTML === "Bana Tıkla") {
+            x.innerHTML = "Bana Tıklama";
+            } else {
+            x.innerHTML = "Bana Tıkla";
+  }
         }
 
     </script>
@@ -153,9 +162,10 @@
             </div>
             
             <div class="icerikkutusu2" id="icerikkutusu2">
-               <h1 style="font-weight: 600; font-size: 2rem; text-decoration: dotted;">İŞLERİM</h1>
+               <h1 class= "header1" style="font-weight: 600; font-size: 2rem; text-decoration: dotted;">İŞLERİM</h1>
                <div class="ilkis">
                     <button class="icinde" id="acilir" onclick="websitesi()">Bana Tıkla</button>
+                    <iframe class="siteicinde" src="https://arifabds.github.io/" height="500" width="500"></iframe>
                </div>
                <div class="ikinciis">
                     Lorem ipsum dolor sit.

@@ -177,6 +177,7 @@ section img {
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
+    width:100%;
     
 }
 
@@ -409,6 +410,17 @@ section img {
 @media(max-width:1030px)
 {
 
+    #arkaplan {
+        background-image: url(../assets/network-g029fcb6a5_1920.jpg);
+        filter: blur(3px);
+        -webkit-filter: blur(3px);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+        width:100%;
+        
+    }
 
     #text {
         margin-top: -20%;

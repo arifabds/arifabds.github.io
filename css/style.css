@@ -404,9 +404,39 @@ section img {
 .diller{
     list-style-type:circle;
 }
+.icerikkutusu2{
+    margin-top: 5rem;
+    position:relative;
+    left:40%;
+}
 
 .ilkis{
+    
+}
+.icinde{
+    padding-right:2rem;
+    padding-left:2rem;
+    margin:5px;
+    background-color: antiquewhite;
+    text-align:center;
+    border-radius:45%;
+    font-weight: 400;
+    border:none;
+    cursor:pointer;
+    transition:0.6s ease-out;
 
+}
+.icinde:hover{
+    font-weight: 600;
+    font-size: 1rem;
+    color:ivory;
+    transition:0.6s ease-out;
+    background-color:#f3a93d;
+}
+.icinde:active{
+    background-color: #cf963f;
+    transition:0.1s ;
+    transform:scale(0.9);
 }
 
 .ikinciis{
@@ -414,7 +444,7 @@ section img {
 }
 
 .ucuncuis{
-    
+
 }
 
 

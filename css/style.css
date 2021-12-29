@@ -238,15 +238,17 @@ section img {
     z-index:10000;
     min-height:8.75rem;
     max-width:12.875rem;
-    opacity:0.7;
-    transform:translateY(2rem),rotateZ(-3deg);
-    transition: transform 4s 0.15s cubic-bezier(0,2,0.5,4),
-                opacity .5s .15s ease-out;
+    opacity:0;
+    display:-100%;
+    transform:translateY(2rem),rotateZ(-2deg);
+    transition: transform 1.3s 0.15s cubic-bezier(0,1,0.5,4),
+                opacity .5s .10s ease-out;
     will-change: transform, opacity;
     
     
 }
 .sertifika1.active{
+    display:0;
     margin-top: 7px;
     margin-bottom:7px;
     top:0;
@@ -264,7 +266,57 @@ section img {
 }
 
 .sertifika1.active:hover{
-    transition: 2s;
+    transition: 1s;
+    transform:scale(0.95);
+    cursor:pointer;
+    opacity:0.9;
+}
+
+.sertifika2{
+    top:-10;
+    left:15rem;
+    border-radius: 3%;
+    box-shadow: 3px 3px var(--color-1);
+    background: url(../assets/SL_012519_18110_94.png);
+    position:relative;
+    background-size: cover;
+    background-position: center;   
+    z-index:10000;
+    min-height:8.75rem;
+    max-width:12.875rem;
+    opacity:0;
+    display:-100%;
+    transform:translateY(2rem),rotateZ(-2deg);
+    transition: transform 1.3s 0.15s cubic-bezier(0,1,0.5,4),
+                opacity .5s .10s ease-out;
+    will-change: transform, opacity;
+    justify-content: space-between;
+    
+    
+}
+.sertifika2.active{
+    
+    display:0;
+    left: 15rem;
+    margin-top: 7px;
+    margin-bottom:7px;
+    top:0;
+    border-radius: 3%;
+    box-shadow: 3px 3px var(--color-1);
+    background: url(../assets/SL_012519_18110_94.png);
+    position:relative;
+    background-size: cover;
+    background-position: center;   
+    z-index:1;
+    min-height:8.75rem;
+    max-width:12.875rem;
+    opacity:1;
+    transform:rotateZ(1deg);
+    justify-content: space-between;
+}
+
+.sertifika2.active:hover{
+    transition: 1s;
     transform:scale(0.95);
     cursor:pointer;
     opacity:0.9;

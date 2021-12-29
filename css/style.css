@@ -273,7 +273,6 @@ section img {
 }
 
 .sertifika2{
-    top:-10;
     left:15rem;
     border-radius: 3%;
     box-shadow: 3px 3px var(--color-1);
@@ -297,10 +296,10 @@ section img {
 .sertifika2.active{
     
     display:0;
-    left: 15rem;
+    left: 18rem;
     margin-top: 7px;
     margin-bottom:7px;
-    top:0;
+    top: -8.9rem;
     border-radius: 3%;
     box-shadow: 3px 3px var(--color-1);
     background: url(../assets/SL_012519_18110_94.png);
@@ -455,6 +454,18 @@ section img {
         margin: 10px;
         padding-right: 50px;
     }
-    
+    .sertifika2.active{
+        top:-7rem;
+        min-height:6.75rem;
+        max-width:10.875rem;
+        min-width:max-content;
+        left:15rem;
+    }
+    .sertifika1.active{
+        min-height:6.75rem;
+        max-width:10.875rem;
+        min-width:max-content;
+
+    }
 }
 

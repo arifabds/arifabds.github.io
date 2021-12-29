@@ -541,12 +541,43 @@ section img {
     }
     .ortak{
         top:-1.4rem;
-        left:33%;
+        left:45%;
         position:relative;
         height:1rem;
         width:60%;
         background-color: rgb(230, 220, 203);
         border-radius:20%;
+    }
+    .problemcozme{
+        position: relative;
+        min-width: 30%;
+        height:1rem;
+    }
+
+    .zamanyonetimi{
+        position: relative;
+        min-width: 30%;
+        height:1rem;
+    }
+
+    .takimcalismasi{
+        position: relative;
+        min-width: 30%;
+        height:1rem;
+    }
+
+    .sorumluluk{
+        position: relative;
+        min-width: 30%;
+        height:1rem;
+
+    }
+
+    .yetenekbaslik{
+        font-size:0.8rem;
+        position:relative;
+        min-width: 10%;
+        left:-4%;
     }
 }
 

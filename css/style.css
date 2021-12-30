@@ -453,7 +453,7 @@ section img {
 .siteicinde.active{
     opacity:1;
     display:100%;
-    left:-35%;
+    left:-22rem;
     transform:translateY(-3rem);
 }
 

@@ -716,6 +716,9 @@ section img {
         top:-5rem;
 
     }
+    section{
+        width:120%;
+    }
 }
 
 

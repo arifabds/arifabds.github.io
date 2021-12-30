@@ -507,11 +507,7 @@ section img {
     header .nav ul li a{
         display:none;
     }
-    #arkaplan{
-        left:0;
-        top:0;
-        right:0;
-    }
+
 
     .text{
         font-size:smaller;

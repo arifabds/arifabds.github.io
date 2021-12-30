@@ -448,9 +448,10 @@ section img {
 .siteicinde{
     position:relative;
     top:1rem;
-    left:500%;
+    opacity:0;
 }
 .siteicinde.active{
+    opacity:1;
     display:100%;
     left:-35%;
     transform:translateY(-3rem);

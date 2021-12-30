@@ -799,10 +799,13 @@ section img {
     section{
         width:120%;
     }
+    .footer{
+        width:100%;
+    }
     .footerkonum{
         position:relative;
         left:25%;
-        bottom:-3rem;
+        bottom:-2rem;
     }
     .header2{
         font-size:0.5rem;

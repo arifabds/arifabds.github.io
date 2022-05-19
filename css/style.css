@@ -246,4 +246,7 @@ body{
     #reset{
         top:45%;
     }
+    #bet{
+        transform: scale(0.9);
+    }
 }

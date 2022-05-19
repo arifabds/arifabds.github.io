@@ -249,4 +249,8 @@ body{
     #bet{
         transform: scale(0.8);
     }
+    .pictures{
+        position: relative;
+        left:15%;
+    }
 }

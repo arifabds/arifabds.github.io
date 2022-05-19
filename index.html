@@ -1,177 +1,32 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>032190076_ArifEmre_Abduşoğlu</title>
-
-    <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    
-    
-    
-    
-    <header name="ust">
-
-        <div name="divim" class="toggle"  onclick="toggleMenu();"></div>
-        
-        
-        <nav class="nav">
-            <ul>
-                <li><a  href="#" > Ana Sayfa</a></li>
-                <li ><a  href="#icerikkutusu1">Hakkımda</a></li>
-                <li><a  href="#icerikkutusu2">İşlerim</a></li>
-                <li><a  href="#footer">İletişim</a></li>
-            </ul>
-        </nav>
-
-        
-        
-    </header>
-
+    <div class="field">
+        <input id="bank" type="text" title="Bank" value=5000 readonly></input><br><br>
+        <button class="buttons" id="hit">hit</button>
+        <button class="buttons" id="stand">stand</button>
+        <button class="buttons" id="double" title="double can only be offered at the initial state" >double</button><br><br>
+        <label id="player"></label>
+        <input type="text" id="hand" title="Your current hand" readonly></input><br><br>
+        <label id="img"></label><br>
     
     
 
-    <section>
-        
-
-        <ul onclick="menutik()"  class="menu" name="sırasız">
-            <li ><a  href="#" > Ana Sayfa</a></li>
-            <li ><a  href="#icerikkutusu1">Hakkımda</a></li>
-            <li ><a  href="#icerikkutusu2">İşlerim</a></li>
-            <li ><a  href="#footer">İletişim</a></li>
-        </ul>
-
-        <img id="arkaplan">
-
-        <div class="text">
-            <h2 id="text"> Merhaba</h2>
-            <h3 id="text2">Ben Arif Emre</h3>
-        </div>
-
-
-        
-    </section>
-    
-    <script>
-        function menu(){
-            var menuToggle = document.querySelector('.toggle');
-            menuToggle.classList.toggle('active')
-        }
-    </script>
-
-    <script type="text/javascript">
-        window.addEventListener('scroll',function(){
-            var header = document.querySelector('header');
-            header.classList.toggle('sticky' , window.scrollY > 555);
-            var foto1 = document.querySelector('.sertifika1');
-            foto1.classList.toggle('active' , window.scrollY > 555);
-            var foto2 = document.querySelector('.sertifika2');
-            foto2.classList.toggle('active' , window.scrollY > 555);
-        });
-        
-
-        function toggleMenu(){       
-            var menuToggle= document.querySelector('.toggle');
-            var menu= document.querySelector('.menu');    
-            menuToggle.classList.toggle('active');
-            menu.classList.toggle('active');
-           
-        }
-        function menutik(){
-            document.getElementsByName('sırasız')[0].className = "menu";
-            document.getElementsByName('ust')[0].className ="ustyok";
-            document.getElementsByName('divim')[0].className ="toggle"
-        }
-        function websitesi(){
-            var site = document.querySelector('.siteicinde');
-            site.classList.toggle('active');
-            var butonum = document.querySelector('.icinde');
-            butonum.classList.toggle('active');
-            var x = document.getElementById("acilir");
-            if (x.innerHTML === "Bana Tıkla") {
-            x.innerHTML = "Bana Tıklama";
-            } else {
-            x.innerHTML = "Bana Tıkla";
-
-  }
-        }
-
-    </script>
-
-    <div id="container1" class="container">
-        <div id="icerik" class="icerik">
-            <div class="icerikkutusu" id="icerikkutusu1">
-                2003 yılında Çankırı'da doğdum. İlköğretimime Zonguldak'ta başladım.
-                , 2.sınıfın ilk dönemine kadar zonguldak'ta eğitim gördüm ardından 
-                Şanlıurfa'ya taşındık. Şanlıurfa'da 1.5 seneye yakın eğitim 
-                gördükten sonra Bursa'ya taşındık. Bursa'da ilköğretimi tamamladım.
-                 Özel Bursa Kültür Okulları'nda ortaokula başladım. 2017'de ortaokulu 
-                 tamamladım ve TEOG sınavına girdim. TEOG sınavında Türkiye genelinde %0.25'lik 
-                 dilime girdim. Lise olarak tercihim Özel Tan Lisesi oldu. Lisede toplam 4 yıl eğitim gördikten sonra YKS sınavına girdim. Sınav sonucunda 
-                 Türkiye genelinde %2.8'lik dilime girip Bursa Uludağ Üniversitesi Bilgisayar Mühendisliği 
-                 Lisans bölümüne yerleştim. Şuanda bu bölümde eğitim görmekteyim.
-                <h2 style="font-weight: 600; font-size: 1.9rem; text-decoration: dotted;">SERTİFİKALARIM:</h2>
-                <div name ="ilkfoto" class="sertifika1">
-                    <img id="sertifika1">
-                </div>
-                <div name="ikincifoto" class= "sertifika2">
-                    <img id="sertifika2">
-                </div>
-                <div class="yeteneklerim">   
-                    <h2 style="font-weight: 600; font-size: 1.9rem; text-decoration: dotted;">YETENEKLERİM:</h2>
-                    <h4 class="yetenekbaslik" style="margin-top:2rem;"> Problem Çözme:</h4>
-                    <div class="ortak">
-                        <div class="problemcozme">%80</div>
-                    </div>
-                    <br><br>
-                    <h4 class="yetenekbaslik"> Zaman Yönetimi:</h4>
-                    <div class="ortak">
-                        <div class="zamanyonetimi">%50</div>
-                    </div>
-                    <br><br>
-                    <h4 class="yetenekbaslik"> Takım Çalışması:</h4>
-                    <div class="ortak">
-                        <div class="takimcalismasi">%60</div>
-                    </div>
-                    <br><br>
-                    <h4 class="yetenekbaslik" > Sorumluluk Bilinci:</h4>
-                    <div class="ortak">
-                        <div class="sorumluluk">&nbsp&nbsp %70</div>
-                    </div>
-                </div>
-                <div class="hobilerim">
-                    <h3 style="font-weight: 600; font-size: 1.5rem; text-decoration: dotted;">HOBİLERİM:</h3> 
-                    <ul class="hobiler">
-                        <li>Film izlemek</li>
-                        <li>Ödev yapmak :(</li>
-                        <li>Spor yapmak</li>
-                    </ul>
-                </div>
-                <div class="dillerim">
-                    <h3 style="font-weight: 600; font-size: 1.5rem; text-decoration: dotted;">DİLLER:</h3>
-                    <ul class="diller">
-                        <li>İnglizce B2</li>
-                        <li>Almanca giriş</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="icerikkutusu2" id="icerikkutusu2">
-               <h1 class= "header1" style="font-weight: 600; font-size: 2rem; text-decoration: dotted;">İŞLERİM</h1>
-               <div class="ilkis">
-                    <button class="icinde" id="acilir" onclick="websitesi()">Bana Tıkla</button>
-                    <iframe class="siteicinde" src="https://arifabds.github.io/" height="500" width="500"></iframe>
-               </div>
-            </div>
-            
-            
-        </div>
+        <label id="pc"></label>
+        <label id="imgofcom"></label><br><br>
+        <label id="results"></label><br>
+        <input id="bet" placeholder="Enter a bet"></input>
+        <button id="betbutton">bet</button><br>
     </div>
+    <br><br><br><br>
+    <button id="reset">reset</button><br><br>
 
 
 
@@ -179,20 +34,15 @@
 
 
 
-<div class="footer">
-    <footer id="footer">
-        <a target="_blank" href="https://github.com/arifabds"><img class="footerfoto"  src="assets/icons8-github-30.png"></a>
-        <a target="_blank" href="https://www.linkedin.com/in/arif-emre-abdusoglu-b40941225/"><img class="footerfoto" src="assets/icons8-linkedin-30.png"></a>
-        <a target="_blank" href="https://www.instagram.com/arifabds/"><img class="footerfoto" src="assets/icons8-instagram-30.png"></a>
-        <a target="_blank" href="mailto:arifabdusoglu0016@gmail.com"><img class="footerfoto" src="assets/icons8-gmail-24.png" height="35px" width="35px"></a>
-        <img class="footeryukarı" onclick="window.scrollTo(0,0)" title="yukarı git" src="assets/icons8-arrow-32.png" height="50px" width="50px">
-        <img class="footerkonum" src="assets/icons8-location-50.png" height="30px" width="30px">
-        <h6 class="header2" style="font-weight: 600">Süleymaniye, Bursa Uludağ Yolu, 16370 Osmangazi/Bursa</h6>
-        
-    </footer>
-</div>
 
 
+
+
+
+
+
+
+
+    <script src="deneme.js"> </script>
 </body>
-
 </html>

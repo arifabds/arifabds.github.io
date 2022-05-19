@@ -181,4 +181,69 @@ body{
     font-weight: 800;
     color:azure;
 }
-
+@media(max-width:1030px)
+{
+    #results{
+        position:relative;
+        left:1%;
+        font-size: 1rem;
+    }
+}
+@media(max-width:970px)
+{
+    #results{
+        position:relative;
+        left:0%;
+        font-size: 0.8rem;
+    }
+}
+@media(max-width:760px)
+{
+    #results{
+        position:relative;
+        left:0%;
+        font-size: 0.8rem;
+        top:4rem;
+    }
+    .buttons{
+        left:41.5%;
+        font-size: 0.8rem;
+        border-width: 0.1rem;
+        padding-left:1rem;
+        padding-right:1rem;
+    }
+    #hand{
+        top:18rem;
+        position:relative;
+        left:40%;
+        color:blanchedalmond;
+        font-weight: 800;
+        font-size: 0.8rem;
+    }
+    #bet{
+        left:0%;
+    }
+    #betbutton{
+        left:27%;
+    }
+}
+@media(max-width:525px)
+{
+    #results{
+        position:relative;
+        font-size: 0.8rem;
+        top:6rem;
+    }
+    #bet{
+        top:33%;
+        
+    }
+    #betbutton{
+        left:20%;
+        top:40%;
+        border-radius: 16%;
+    }
+    #reset{
+        top:45%;
+    }
+}

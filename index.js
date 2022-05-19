@@ -109,7 +109,7 @@ function results(total, totalcom,unique){//This function compares the dealer's h
     }
 }
 function reveal(randompc1, randompc2){//This function responsible for flipping the card in the dealer's hand at the initial state.
-    document.getElementById("imgofcom").innerHTML = `<img class="pictures" src= /assets/${cards[randompc1]}.png width="66" height="100" title="This card's value is(if it is an ace, it can differ):${cards2[cards.indexOf(cards[randompc1])]}"><img class="pictures" src= assets/${cards[randompc2]}.png width="66" height="100" title="This card's value is(if it is an ace, it can differ):${cards2[cards.indexOf(cards[randompc2])]}">`
+    document.getElementById("imgofcom").innerHTML = `<img class="pictures" src= ../assets/${cards[randompc1]}.png width="66" height="100" title="This card's value is(if it is an ace, it can differ):${cards2[cards.indexOf(cards[randompc1])]}"><img class="pictures" src= ../assets/${cards[randompc2]}.png width="66" height="100" title="This card's value is(if it is an ace, it can differ):${cards2[cards.indexOf(cards[randompc2])]}">`
 }
 function game(){
     unique = false;//Unique variable's initial value is false
@@ -122,8 +122,8 @@ function game(){
     let randompc1 = Math.floor(Math.random()*cards.length), randompc2 = Math.floor(Math.random()*cards.length);//Randomly chooses dealer's hand's initial cards' indexes.
 
     //In the below, it changes the innerHTML of those ids with images that include necessary cards' images. I named cards' png files with the same names as the cards in the array: cards.
-    document.getElementById("img").innerHTML = `<img class="pictures" src= assets/${cards[random1]}.png width="66" height="100" title="This card's value is(if it is an ace, it can differ):${cards2[cards.indexOf(cards[random1])]}"><img class="pictures" src= assets/${cards[random2]}.png width="66" height="100" title="This card's value is(if it is an ace, it can differ):${cards2[cards.indexOf(cards[random2])]}">`
-    document.getElementById("imgofcom").innerHTML = `<img class="pictures" src= assets/${cards[randompc1]}.png width="66" height="100" title="This card's value is(if it is an ace, it can differ):${cards2[cards.indexOf(cards[randompc1])]}"><img class="pictures" src= "assets/Cardback.png" width="66" height="100" title="You should not know this card's value!">`
+    document.getElementById("img").innerHTML = `<img class="pictures" src= ../assets/${cards[random1]}.png width="66" height="100" title="This card's value is(if it is an ace, it can differ):${cards2[cards.indexOf(cards[random1])]}"><img class="pictures" src= ../assets/${cards[random2]}.png width="66" height="100" title="This card's value is(if it is an ace, it can differ):${cards2[cards.indexOf(cards[random2])]}">`
+    document.getElementById("imgofcom").innerHTML = `<img class="pictures" src= ../assets/${cards[randompc1]}.png width="66" height="100" title="This card's value is(if it is an ace, it can differ):${cards2[cards.indexOf(cards[randompc1])]}"><img class="pictures" src= "../assets/Cardback.png" width="66" height="100" title="You should not know this card's value!">`
 
     //Calculates the value of cards in your and the dealer's hands.
     var total = cards2[cards.indexOf(cards[random1])] + cards2[cards.indexOf(cards[random2])];
@@ -189,7 +189,7 @@ function game(){
                 reveal(randompc1, randompc2);//First it flip the card in the initial state.
                 while(totalcom < 17){//Draws cards until the hand's value become greater or equal to 17.
                     let random1 = Math.floor(Math.random()*cards.length);
-                    document.getElementById("imgofcom").innerHTML += `<img class="pictures" src= assets/${cards[random1]}.png width="66" height="100" title="This card's value is(if it is an ace, it can differ):${cards2[cards.indexOf(cards[randompc1])]}">`
+                    document.getElementById("imgofcom").innerHTML += `<img class="pictures" src= ../assets/${cards[random1]}.png width="66" height="100" title="This card's value is(if it is an ace, it can differ):${cards2[cards.indexOf(cards[randompc1])]}">`
                     if(cards[random1]== "AH"||cards[random1] == "AC" ||cards[random1]=="AD"|| cards[random1]=="AS"){
                         acecounterpc += 1;
                     }
@@ -245,7 +245,7 @@ function game(){
         document.querySelector('#double').disabled = true;
         let random1 = Math.floor(Math.random()*cards.length);
 
-        document.getElementById("img").innerHTML += `<img class="pictures" src= assets/${cards[random1]}.png width="66" height="100" title="This card's value is(if it is an ace, it can differ):${cards2[cards.indexOf(cards[random1])]}">`
+        document.getElementById("img").innerHTML += `<img class="pictures" src= ../assets/${cards[random1]}.png width="66" height="100" title="This card's value is(if it is an ace, it can differ):${cards2[cards.indexOf(cards[random1])]}">`
         if(cards[random1]== "AH"||cards[random1] == "AC" ||cards[random1]=="AD"|| cards[random1]=="AS"){
             acecounter += 1;
         }

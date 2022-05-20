@@ -43,6 +43,7 @@ document.getElementById("reset").onclick = function(){//Resets the innerHTML val
     document.getElementById("hand").value = ``;
     document.getElementById("bet").value = ``;
     document.querySelector('#betbutton').disabled = false;
+    disable();
 }
 document.getElementById("betbutton").onclick = function(){
     let quantity = document.getElementById("bet").value;//Checks the value in the bet section

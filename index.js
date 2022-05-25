@@ -190,7 +190,7 @@ function game(){
                 reveal(randompc1, randompc2);//First it flip the card in the initial state.
                 while(totalcom < 17){//Draws cards until the hand's value become greater or equal to 17.
                     let random1 = Math.floor(Math.random()*cards.length);
-                    document.getElementById("imgofcom").innerHTML += `<img class="pictures" src= assets/${cards[random1]}.png width="66" height="100" title="This card's value is(if it is an ace, it can differ):${cards2[cards.indexOf(cards[randompc1])]}">`
+                    document.getElementById("imgofcom").innerHTML += `<img class="pictures" src= assets/${cards[random1]}.png width="66" height="100" title="This card's value is(if it is an ace, it can differ):${cards2[cards.indexOf(cards[random1])]}">`
                     if(cards[random1]== "AH"||cards[random1] == "AC" ||cards[random1]=="AD"|| cards[random1]=="AS"){
                         acecounterpc += 1;
                     }

@@ -37,7 +37,7 @@ function sendRequest() {
         chatBody.appendChild(waitingMessage);
 
         // Backend'e istek gönder
-        fetch("http://127.0.0.1:5000/generate", {
+        fetch("https://web-integrated-chat-bot.onrender.com/generate", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ userPrompt }),

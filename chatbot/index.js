@@ -39,7 +39,10 @@ function sendRequest() {
         // Backend'e istek gönder
         fetch("https://webintegratedchatbot-production.up.railway.app/generate", {
             method: "POST",
-            headers: { "Content-Type": "application/json" },
+            mode: "cors",
+            headers: { "Content-Type": "application/json",
+                       "Accept": "application/json"
+             },
             body: JSON.stringify({ userPrompt }),
         })
         .then(response => response.json())

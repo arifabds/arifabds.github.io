@@ -37,7 +37,7 @@ function sendRequest() {
         chatBody.appendChild(waitingMessage);
 
         // Backend'e istek gönder
-        fetch("https://web-integrated-chat-bot.onrender.com/generate", {
+        fetch("https://webintegratedchatbot-production.up.railway.app/generate", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ userPrompt }),

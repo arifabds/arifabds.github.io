@@ -37,7 +37,7 @@ function sendRequest() {
         chatBody.appendChild(waitingMessage);
 
         // Backend'e istek gönder
-        fetch("https://arifabds.github.io/chatbot/generate", {
+        fetch("https://cors-anywhere.herokuapp.com/https://web-integrated-chat-bot.onrender.com/generate", {
             method: "POST",
             headers: { 
                 "Content-Type": "application/json",

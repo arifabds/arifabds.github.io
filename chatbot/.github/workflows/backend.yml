@@ -1,0 +1,38 @@
+name: Flask Backend
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Reponu Klonla
+      uses: actions/checkout@v4
+
+    - name: Python Kurulumu
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+
+    - name: Bağımlılıkları Kur
+      run: |
+        cd chatbot
+        python -m venv venv
+        source venv/bin/activate
+        pip install -r requirements.txt
+
+    - name: Flask Uygulamasını Çalıştır
+      run: |
+        cd chatbot
+        source venv/bin/activate
+        export FLASK_APP=main.py
+        export PORT=8080
+        flask run --host=0.0.0.0 --port=8080

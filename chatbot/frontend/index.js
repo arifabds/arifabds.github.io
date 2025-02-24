@@ -37,7 +37,7 @@ function sendRequest() {
         chatBody.appendChild(waitingMessage);
 
         // Backend'e istek gönder
-        fetch("https://web-integrated-chat-bot.onrender.com/generate", {
+        fetch("https://arifabds.github.io/chatbot/generate", {
             method: "POST",
             headers: { 
                 "Content-Type": "application/json",

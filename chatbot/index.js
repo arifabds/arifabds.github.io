@@ -39,7 +39,7 @@ function sendRequest() {
         // Backend'e istek gönder
         fetch("https://webintegratedchatbot-production.up.railway.app/proxy", { //Proxy API'si
             method: "POST",
-            mode: "cors",
+            mode: "no-cors",
             headers: { "Content-Type": "application/json",
                 "Accept": "application/json"
              },

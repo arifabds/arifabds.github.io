@@ -37,13 +37,16 @@ function sendRequest() {
         chatBody.appendChild(waitingMessage);
 
         // Backend'e istek gönder
-        fetch("https://webintegratedchatbot-production.up.railway.app/generate", {
+        fetch("https://webintegratedchatbot-production.up.railway.app/proxy", { //Proxy API'si
             method: "POST",
             mode: "cors",
             headers: { "Content-Type": "application/json",
-                       "Accept": "application/json"
+                "Accept": "application/json"
              },
-            body: JSON.stringify({ userPrompt }),
+             body: JSON.stringify({
+                url: "https://webintegratedchatbot-production.up.railway.app/generate", // Render API
+                userPrompt: userPrompt
+            }),
         })
         .then(response => response.json())
         .then(data => {

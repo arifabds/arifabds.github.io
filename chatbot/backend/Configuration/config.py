@@ -1,0 +1,15 @@
+import os
+from dotenv import load_dotenv
+
+class Config:
+
+    load_dotenv()
+
+    CHAT_SUMMARY_API_KEY = os.getenv("CHAT_SUMMARY_API_KEY")
+    SCRAPE_PROCESS_API_KEY = os.getenv("SCRAPE_PROCESS_API_KEY")
+    CONTEXT_MERGE_API_KEY = os.getenv("CONTEXT_MERGE_API_KEY")
+    KEYWORD_GEN_API_KEY = os.getenv("KEYWORD_GEN_API_KEY")
+    SEARCH_QUERY_API_KEY = os.getenv("SEARCH_QUERY_API_KEY")
+    CUSTOM_SEARCH_API_KEY = os.getenv("CUSTOM_SEARCH_API_KEY")
+    CUSTOM_SEARCH_ENGINE_ID = os.getenv("CUSTOM_SEARCH_ENGINE_ID")
+    CHROME_EXTENSION_API_KEY = os.getenv("CHROME_EXTENSION_API_KEY")

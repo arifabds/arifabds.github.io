@@ -37,16 +37,13 @@ function sendRequest() {
         chatBody.appendChild(waitingMessage);
 
         // Backend'e istek gönder
-        fetch("https://web-integrated-chat-bot.onrender.com/proxy", { //Proxy API'si
+        fetch("https://web-integrated-chat-bot.onrender.com/generate", {
             method: "POST",
-            mode: "cors",
-            headers: { "Content-Type": "application/json",
+            headers: { 
+                "Content-Type": "application/json",
                 "Accept": "application/json"
-             },
-             body: JSON.stringify({
-                url: "https://web-integrated-chat-bot.onrender.com/generate", // Render API
-                userPrompt: userPrompt
-            }),
+            },
+            body: JSON.stringify({ userPrompt: userPrompt }),
         })
         .then(response => response.json())
         .then(data => {

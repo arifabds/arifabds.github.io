@@ -37,7 +37,7 @@ function sendRequest() {
         chatBody.appendChild(waitingMessage);
 
         // Backend'e istek gönder
-        fetch("https://web-integrated-chat-bot.vercel.app/generate", {
+        fetch("https://web-integrated-chat-bot.onrender.com/generate", {
             method: "POST",
             headers: { 
                 "Content-Type": "application/json",

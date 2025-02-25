@@ -12,12 +12,14 @@ body {
     background-color: #f8f8f8;
     line-height: 1.6;
     overflow-x: hidden;
+    padding: 0;
+    margin: 0;
 }
 
 /* Header */
 header {
     background-color: #1f1f1f;
-    padding: 1.5em 0;
+    padding: 1em 0;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -34,6 +36,7 @@ header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .logo {
@@ -45,6 +48,7 @@ header .container {
 nav ul {
     display: flex;
     list-style: none;
+    padding: 0;
     gap: 1.5em;
 }
 
@@ -52,6 +56,7 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
     transition: color 0.3s ease;
+    font-size: 1.1em;
 }
 
 nav ul li a:hover {
@@ -63,8 +68,8 @@ nav ul li a:hover {
     background: linear-gradient(135deg, #007bff, #00d1ff);
     color: white;
     text-align: center;
-    padding: 5em 1em;
-    animation: fadeIn 2s ease;
+    padding: 6em 1em;
+    animation: fadeIn 1.5s ease;
 }
 
 .hero-content h2 {
@@ -86,6 +91,7 @@ nav ul li a:hover {
     text-decoration: none;
     font-weight: bold;
     transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .btn:hover {
@@ -97,16 +103,17 @@ nav ul li a:hover {
 /* Bölüm Başlıkları */
 section h2 {
     text-align: center;
-    margin: 1.5em 0;
+    margin: 2em 0;
     color: #007bff;
+    font-size: 2.5em;
 }
 
 /* Projeler */
 .project-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5em;
-    margin-top: 1.5em;
+    padding: 1em 0;
 }
 
 .project-card {
@@ -115,6 +122,7 @@ section h2 {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
 }
 
 .project-card:hover {
@@ -162,16 +170,23 @@ footer {
 
 /* Responsive Tasarım */
 @media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        gap: 1em;
+        text-align: center;
+    }
+
     .hero-content h2 {
         font-size: 2.2em;
     }
 
-    .project-grid {
-        grid-template-columns: 1fr;
-    }
-
     nav ul {
         flex-direction: column;
-        gap: 1em;
+        gap: 0.5em;
+        padding: 0;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
     }
 }

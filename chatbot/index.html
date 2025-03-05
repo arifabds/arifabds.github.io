@@ -81,18 +81,24 @@
             border-radius: 20px;
             overflow: hidden;
             border: 2px solid #ccc;
-            transition: all 0.3s ease-in-out; /* Geçiş efekti */
+            width: 80px;
+            height: 30px;
         }
+
         .language-switch div {
-            padding: 5px 15px;
-            cursor: pointer;
+            flex: 1;
+            text-align: center;
+            font-size: 14px;
             font-weight: bold;
-            transition: all 0.3s ease-in-out; /* Smooth geçiş */
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
         }
+
         .language-switch .active {
             background: #007bff;
-            color: rgb(150, 145, 145);
+            color: white;
         }
+
     </style>
 </head>
 <body>
@@ -128,7 +134,7 @@
             const container = document.querySelector(".container");
 
             function toggleLanguage() {
-                container.style.opacity = "0"; // Önce opaklığı sıfırla
+                container.style.opacity = "0"; 
                 
                 setTimeout(() => {
                     if (langEn.classList.contains("active")) {
@@ -147,8 +153,8 @@
                         desc.textContent = "This app can search the web given prompt and generate content from several websites.";
                     }
 
-                    container.style.opacity = "1"; // Sonra tekrar görünür yap
-                }, 300); // Geçiş süresi
+                    container.style.opacity = "1"; 
+                }, 300); 
             }
 
             langEn.addEventListener("click", toggleLanguage);

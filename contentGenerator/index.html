@@ -64,7 +64,7 @@
         }
         .language-switch {
             position: absolute;
-            top: 20px;
+            top: 10px;
             right: 20px;
             display: flex;
             align-items: center;
@@ -72,17 +72,22 @@
             border-radius: 20px;
             overflow: hidden;
             border: 2px solid #ccc;
-            transition: all 0.3s ease-in-out;
+            width: 80px;
+            height: 30px;
         }
+
         .language-switch div {
-            padding: 5px 15px;
-            cursor: pointer;
+            flex: 1;
+            text-align: center;
+            font-size: 14px;
             font-weight: bold;
+            cursor: pointer;
             transition: all 0.3s ease-in-out;
         }
+
         .language-switch .active {
             background: #007bff;
-            color: rgb(150, 145, 145);
+            color: white;
         }
     </style>
 </head>

@@ -22,17 +22,9 @@
             border-radius: 10px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
             backdrop-filter: blur(10px);
-            transition: all 0.5s ease-in-out; /* Sayfa içeriği geçiş efekti */
-        }
-        h1 {
-            font-size: 28px;
-            margin-bottom: 10px;
             transition: all 0.5s ease-in-out;
         }
-        p {
-            font-size: 16px;
-            line-height: 1.6;
-            padding: 0 15px;
+        h1, p, .link, footer {
             transition: all 0.5s ease-in-out;
         }
         .link {
@@ -69,7 +61,6 @@
             margin-top: 30px;
             font-size: 14px;
             opacity: 0.8;
-            transition: all 0.5s ease-in-out;
         }
         .language-switch {
             position: absolute;
@@ -78,13 +69,12 @@
             display: flex;
             align-items: center;
             background: white;
-            border-radius: 20px;
+            border-radius: 30px;
             overflow: hidden;
             border: 2px solid #ccc;
-            width: 80px;
-            height: 30px;
+            width: 100px;
+            height: 35px;
         }
-
         .language-switch div {
             flex: 1;
             text-align: center;
@@ -92,19 +82,18 @@
             font-weight: bold;
             cursor: pointer;
             transition: all 0.3s ease-in-out;
+            line-height: 35px;
         }
-
         .language-switch .active {
-            background: #007bff;
+            background: #28a745;
             color: white;
         }
-
     </style>
 </head>
 <body>
     <div class="language-switch">
-        <div id="lang-tr">TR</div>
         <div id="lang-en" class="active">EN</div>
+        <div id="lang-tr">TR</div>
     </div>
     
     <div class="container">
@@ -134,8 +123,7 @@
             const container = document.querySelector(".container");
 
             function toggleLanguage() {
-                container.style.opacity = "0"; 
-                
+                container.style.opacity = "0";
                 setTimeout(() => {
                     if (langEn.classList.contains("active")) {
                         langEn.classList.remove("active");
@@ -152,9 +140,8 @@
                         footerText.textContent = "© 2025 All rights reserved.";
                         desc.textContent = "This app can search the web given prompt and generate content from several websites.";
                     }
-
-                    container.style.opacity = "1"; 
-                }, 300); 
+                    container.style.opacity = "1";
+                }, 300);
             }
 
             langEn.addEventListener("click", toggleLanguage);

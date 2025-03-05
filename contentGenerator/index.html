@@ -51,6 +51,18 @@
             gap: 15px;
             margin-top: 20px;
         }
+
+        .image-gallery img {
+            width: 250px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .image-gallery img:hover {
+            transform: scale(1.05);
+        }
         .image-gallery div {
             width: 250px;
             height: 150px;
@@ -72,16 +84,19 @@
 <body>
     <div class="container">
         <h1>LLM-Based Content Generator</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin at eros sit amet sapien maximus tincidunt.</p>
+        <p>This extension generates the desired type of descriptions using an LLM (Large Language Model) based on the content of a website.</p>
+
+        <p>Bu uygulama URL'deki veya direkt sitenin içeriğindeki bilgileri, kullanıcı isteğine göre değerlendirerek yapay zeka destekli bir içerik üretimi sağlar.</p>
         
         <a class="link" href="https://chromewebstore.google.com/detail/llm-based-content-generat/cpngfebnonodehhbnjmcjdjhbfjjgikb" target="_blank">🔗 Chrome Eklentisini Yükle</a>
         
         <div class="image-gallery">
-            <div>Görsel 1</div>
-            <div>Görsel 2</div>
-            <div>Görsel 3</div>
-            <div>Görsel 4</div>
+            <img src="https://arifabds.github.io/contentGenerator/images/en_determine_the_topic_example.png" alt="Görsel 1">
+            <img src="https://arifabds.github.io/contentGenerator/images/tr_haber_ornek.png" alt="Görsel 2">
+            <img src="https://arifabds.github.io/contentGenerator/images/tr_konuyu_belirle_ornek.png" alt="Görsel 3">
+            <img src="https://arifabds.github.io/contentGenerator/images/tr_urun_ornek.png" alt="Görsel 4">
         </div>
+        
         
         <a class="link" href="https://arifabds.github.io/contentGenerator/terms/" target="_blank">📜 Terms & Conditions</a>
         <a class="link" href="https://arifabds.github.io/contentGenerator/privacy/" target="_blank">🔏 Privacy Policy</a>

@@ -12,6 +12,7 @@
             background: linear-gradient(135deg, #1e3c72, #2a5298);
             color: white;
             text-align: center;
+            position: relative;
         }
         .container {
             max-width: 800px;
@@ -21,15 +22,18 @@
             border-radius: 10px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
             backdrop-filter: blur(10px);
+            transition: all 0.5s ease-in-out; /* Sayfa içeriği geçiş efekti */
         }
         h1 {
             font-size: 28px;
             margin-bottom: 10px;
+            transition: all 0.5s ease-in-out;
         }
         p {
             font-size: 16px;
             line-height: 1.6;
             padding: 0 15px;
+            transition: all 0.5s ease-in-out;
         }
         .link {
             display: inline-block;
@@ -39,7 +43,7 @@
             color: white;
             text-decoration: none;
             border-radius: 6px;
-            transition: 0.3s;
+            transition: background 0.3s ease-in-out;
         }
         .link:hover {
             background: #0056b3;
@@ -56,79 +60,61 @@
             height: auto;
             border-radius: 8px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease-in-out;
         }
         .image-gallery img:hover {
             transform: scale(1.05);
-        }
-        .image-gallery div {
-            width: 250px;
-            height: 150px;
-            background: rgba(255, 255, 255, 0.2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 8px;
-            font-size: 14px;
-            color: white;
         }
         footer {
             margin-top: 30px;
             font-size: 14px;
             opacity: 0.8;
+            transition: all 0.5s ease-in-out;
         }
         .language-switch {
             position: absolute;
             top: 20px;
             right: 20px;
             display: flex;
-            border: 2px solid #ccc;
-            border-radius: 25px;
+            align-items: center;
+            background: white;
+            border-radius: 20px;
             overflow: hidden;
-            width: 80px;
-            height: 30px;
+            border: 2px solid #ccc;
+            transition: all 0.3s ease-in-out; /* Geçiş efekti */
+        }
+        .language-switch div {
+            padding: 5px 15px;
             cursor: pointer;
-        }
-        .lang-option {
-            flex: 1;
-            text-align: center;
-            font-size: 14px;
             font-weight: bold;
-            line-height: 30px;
-            color: black;
-            background-color: white;
-            transition: all 0.3s ease;
+            transition: all 0.3s ease-in-out; /* Smooth geçiş */
         }
-        .lang-option.active {
-            background-color: #28a745;
+        .language-switch .active {
+            background: #007bff;
             color: white;
         }
     </style>
 </head>
 <body>
     <div class="language-switch">
-        <div id="language-toggle">
-            <div id="lang-en" class="lang-option active">EN</div>
-            <div id="lang-tr" class="lang-option">TR</div>
-        </div>
+        <div id="lang-tr">TR</div>
+        <div id="lang-en" class="active">EN</div>
     </div>
     
     <div class="container">
         <h1 id="title">Web Integrated Chatbot (Currently under maintenance)</h1>
         <p id="description">This app can search the web given prompt and generate content from several websites.</p>
-
-        <p id="description-tr" style="display: none;">Bu uygulama, verilen bir istemi (prompt) alarak internette arama yapabilir ve çeşitli web sitelerinden içerik oluşturabilir.</p>
         
         <div class="image-gallery">
             <img src="https://arifabds.github.io/chatbot/images/example_1.png" alt="Görsel 1">
             <img src="https://arifabds.github.io/chatbot/images/example_2.png" alt="Görsel 2">
         </div>
         
-        <a class="link" href="https://arifabds.github.io/chatbot/app" target="_blank">Uygulamaya git!</a>
+        <a id="app-link" class="link" href="https://arifabds.github.io/chatbot/app" target="_blank">Go to the app!</a>
     </div>
     
     <footer>
-        <p>© 2025 Tüm Hakları Saklıdır.</p>
+        <p id="footerText">© 2025 All rights reserved.</p>
     </footer>
 
     <script>
@@ -136,23 +122,33 @@
             const langEn = document.getElementById("lang-en");
             const langTr = document.getElementById("lang-tr");
             const title = document.getElementById("title");
-            const descEn = document.getElementById("description");
-            const descTr = document.getElementById("description-tr");
+            const desc = document.getElementById("description");
+            const appLink = document.getElementById("app-link");
+            const footerText = document.getElementById("footerText");
+            const container = document.querySelector(".container");
 
             function toggleLanguage() {
-                if (langEn.classList.contains("active")) {
-                    langEn.classList.remove("active");
-                    langTr.classList.add("active");
-                    title.textContent = "Web Entegreli Chatbot (Şu anda bakımda)";
-                    descEn.style.display = "none";
-                    descTr.style.display = "block";
-                } else {
-                    langTr.classList.remove("active");
-                    langEn.classList.add("active");
-                    title.textContent = "Web Integrated Chatbot (Currently under maintenance)";
-                    descTr.style.display = "none";
-                    descEn.style.display = "block";
-                }
+                container.style.opacity = "0"; // Önce opaklığı sıfırla
+                
+                setTimeout(() => {
+                    if (langEn.classList.contains("active")) {
+                        langEn.classList.remove("active");
+                        langTr.classList.add("active");
+                        title.textContent = "Web Entegreli Chatbot (Şu anda bakımda)";
+                        appLink.textContent = "Uygulamaya git!";
+                        footerText.textContent = "© 2025 Tüm Hakları Saklıdır.";
+                        desc.textContent = "Bu uygulama, verilen bir istemi (prompt) alarak internette arama yapabilir ve çeşitli web sitelerinden içerik oluşturabilir.";
+                    } else {
+                        langTr.classList.remove("active");
+                        langEn.classList.add("active");
+                        title.textContent = "Web Integrated Chatbot (Currently under maintenance)";
+                        appLink.textContent = "Go to the app!";
+                        footerText.textContent = "© 2025 All rights reserved.";
+                        desc.textContent = "This app can search the web given prompt and generate content from several websites.";
+                    }
+
+                    container.style.opacity = "1"; // Sonra tekrar görünür yap
+                }, 300); // Geçiş süresi
             }
 
             langEn.addEventListener("click", toggleLanguage);

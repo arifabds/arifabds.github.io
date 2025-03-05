@@ -12,6 +12,7 @@
             background: linear-gradient(135deg, #1e3c72, #2a5298);
             color: white;
             text-align: center;
+            position: relative;
         }
         .container {
             max-width: 800px;
@@ -21,15 +22,10 @@
             border-radius: 10px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
             backdrop-filter: blur(10px);
+            transition: all 0.5s ease-in-out;
         }
-        h1 {
-            font-size: 28px;
-            margin-bottom: 10px;
-        }
-        p {
-            font-size: 16px;
-            line-height: 1.6;
-            padding: 0 15px;
+        h1, p, .link, footer {
+            transition: all 0.5s ease-in-out;
         }
         .link {
             display: inline-block;
@@ -39,7 +35,7 @@
             color: white;
             text-decoration: none;
             border-radius: 6px;
-            transition: 0.3s;
+            transition: background 0.3s ease-in-out;
         }
         .link:hover {
             background: #0056b3;
@@ -51,44 +47,56 @@
             gap: 15px;
             margin-top: 20px;
         }
-
         .image-gallery img {
             width: 250px;
             height: auto;
             border-radius: 8px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease-in-out;
         }
-
         .image-gallery img:hover {
             transform: scale(1.05);
-        }
-        .image-gallery div {
-            width: 250px;
-            height: 150px;
-            background: rgba(255, 255, 255, 0.2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 8px;
-            font-size: 14px;
-            color: white;
         }
         footer {
             margin-top: 30px;
             font-size: 14px;
             opacity: 0.8;
         }
+        .language-switch {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 2px solid #ccc;
+            transition: all 0.3s ease-in-out;
+        }
+        .language-switch div {
+            padding: 5px 15px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease-in-out;
+        }
+        .language-switch .active {
+            background: #007bff;
+            color: rgb(150, 145, 145);
+        }
     </style>
 </head>
 <body>
+    <div class="language-switch">
+        <div id="lang-tr">TR</div>
+        <div id="lang-en" class="active">EN</div>
+    </div>
+    
     <div class="container">
-        <h1>LLM-Based Content Generator</h1>
-        <p>This extension generates the desired type of descriptions using an LLM (Large Language Model) based on the content of a website.</p>
-
-        <p>Bu uygulama URL'deki veya direkt sitenin içeriğindeki bilgileri, kullanıcı isteğine göre değerlendirerek yapay zeka destekli bir içerik üretimi sağlar.</p>
+        <h1 id="title">LLM-Based Content Generator</h1>
+        <p id="description">This extension generates the desired type of descriptions using an LLM (Large Language Model) based on the content of a website.</p>
         
-        <a class="link" href="https://chromewebstore.google.com/detail/llm-based-content-generat/cpngfebnonodehhbnjmcjdjhbfjjgikb" target="_blank">🔗 Chrome Eklentisini Yükle</a>
+        <a id="chrome-link" class="link" href="https://chromewebstore.google.com/detail/llm-based-content-generat/cpngfebnonodehhbnjmcjdjhbfjjgikb" target="_blank">🔗 Download Chrome Extension</a>
         
         <div class="image-gallery">
             <img src="https://arifabds.github.io/contentGenerator/images/en_determine_the_topic_example.png" alt="Görsel 1">
@@ -97,13 +105,48 @@
             <img src="https://arifabds.github.io/contentGenerator/images/tr_urun_ornek.png" alt="Görsel 4">
         </div>
         
-        
         <a class="link" href="https://arifabds.github.io/contentGenerator/terms/" target="_blank">📜 Terms & Conditions</a>
         <a class="link" href="https://arifabds.github.io/contentGenerator/privacy/" target="_blank">🔏 Privacy Policy</a>
     </div>
     
     <footer>
-        <p>© 2025 Tüm Hakları Saklıdır.</p>
+        <p id="footerText">© 2025 All rights reserved.</p>
     </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const langEn = document.getElementById("lang-en");
+            const langTr = document.getElementById("lang-tr");
+            const title = document.getElementById("title");
+            const desc = document.getElementById("description");
+            const chromeLink = document.getElementById("chrome-link");
+            const footerText = document.getElementById("footerText");
+
+            function toggleLanguage() {
+                document.body.style.opacity = "0";
+                setTimeout(() => {
+                    if (langEn.classList.contains("active")) {
+                        langEn.classList.remove("active");
+                        langTr.classList.add("active");
+                        title.textContent = "LLM Tabanlı İçerik Üretici";
+                        desc.textContent = "Bu uygulama URL'deki veya direkt sitenin içeriğindeki bilgileri, kullanıcı isteğine göre değerlendirerek yapay zeka destekli bir içerik üretimi sağlar.";
+                        chromeLink.textContent = "🔗 Chrome Eklentisini Yükle";
+                        footerText.textContent = "© 2025 Tüm Hakları Saklıdır.";
+                    } else {
+                        langTr.classList.remove("active");
+                        langEn.classList.add("active");
+                        title.textContent = "LLM-Based Content Generator";
+                        desc.textContent = "This extension generates the desired type of descriptions using an LLM (Large Language Model) based on the content of a website.";
+                        chromeLink.textContent = "🔗 Download Chrome Extension";
+                        footerText.textContent = "© 2025 All rights reserved.";
+                    }
+                    document.body.style.opacity = "1";
+                }, 300);
+            }
+
+            langEn.addEventListener("click", toggleLanguage);
+            langTr.addEventListener("click", toggleLanguage);
+        });
+    </script>
 </body>
 </html>

@@ -69,11 +69,12 @@
             display: flex;
             align-items: center;
             background: white;
-            border-radius: 20px;
+            border-radius: 15px;
             overflow: hidden;
             border: 2px solid #ccc;
-            width: 80px;
-            height: 30px;
+            width: 100px;
+            height: 40px;
+            justify-content: space-between;
         }
 
         .language-switch div {
@@ -82,12 +83,15 @@
             font-size: 14px;
             font-weight: bold;
             cursor: pointer;
-            transition: all 0.3s ease-in-out;
+            transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+            line-height: 40px;
+            color: black; 
+            background: white; 
         }
 
         .language-switch .active {
-            background: #007bff;
-            color: white;
+            background: #28a745; 
+            color: white; 
         }
     </style>
 </head>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gizlilik Politikası</title>
+    <title>Privacy Policy</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -11,6 +11,8 @@
             margin: 20px;
             padding: 20px;
             background-color: #f9f9f9;
+            text-align: center;
+            transition: opacity 0.5s ease-in-out;
         }
         .container {
             max-width: 800px;
@@ -32,42 +34,105 @@
             text-align: center;
             color: #777;
         }
+        .language-switch {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            border: 2px solid #ccc;
+            width: 100px;
+            height: 40px;
+            justify-content: space-between;
+        }
+        .language-switch div {
+            flex: 1;
+            text-align: center;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+            line-height: 40px;
+            color: black;
+            background: white;
+        }
+        .language-switch .active {
+            background: #28a745;
+            color: white;
+        }
     </style>
 </head>
 <body>
+    <div class="language-switch">
+        <div id="lang-tr">TR</div>
+        <div id="lang-en" class="active">EN</div>
+    </div>
+    
     <div class="container">
-        <h1>Gizlilik Politikası</h1>
-        <p><strong>Son Güncelleme:</strong> 04.03.2025</p>
+        <h1 id="title">Privacy Policy</h1>
+        <p><strong>Last Updated:</strong> 04.03.2025</p>
         
-        <h2>1. Hangi Verileri Topluyoruz?</h2>
-        <p>Uzantımız, yalnızca kullanıcı promptlarını, model yanıtlarını ve isteğe bağlı olarak sayfa içeriğini işler. Bu veriler oturum süresince geçicidir ve saklanmaz.</p>
+        <h2 id="section1">1. What Data Do We Collect?</h2>
+        <p id="text1">Our extension only processes user prompts, model responses, and optionally the page content. These data are temporary and not stored.</p>
         
-        <h2>2. Verilerin Kullanım Amacı</h2>
-        <p>Toplanan veriler, kullanıcının belirttiği isteğe göre metin üretmek ve modelin bağlamı anlamasını sağlamak için kullanılır. Üçüncü taraflarla paylaşılmaz.</p>
+        <h2 id="section2">2. Purpose of Data Usage</h2>
+        <p id="text2">The collected data is used to generate text based on user requests and to help the model understand the context. It is not shared with third parties.</p>
         
-        <h2>3. Verilerin Saklanması ve Güvenliği</h2>
-        <p>Veriler yalnızca oturum süresince işlenir ve saklanmaz. Tüm veri transferleri şifreli (HTTPS) bağlantılar üzerinden gerçekleşir.</p>
+        <h2 id="section3">3. Data Storage and Security</h2>
+        <p id="text3">Data is processed only during the session and not stored. All data transfers are encrypted via HTTPS.</p>
         
-        <h2>4. Kullanıcı Hakları ve Seçenekleri</h2>
-        <p>Kullanıcı, modelin kendi promptlarını işlemesini istemiyorsa, uzantıyı kullanmayabilir.</p>
+        <h2 id="section4">4. User Rights and Choices</h2>
+        <p id="text4">Users who do not want their prompts to be processed by the model may refrain from using the extension.</p>
         
-        <h2>5. Üçüncü Taraf Servisler</h2>
-        <p>Uzantı, yalnızca GroqCloud API'yi kullanmaktadır. Bunun dışında hiçbir servis ile veri paylaşımı yapılmaz.</p>
+        <h2 id="section5">5. Third-Party Services</h2>
+        <p id="text5">The extension only uses GroqCloud API and does not share data with any other services.</p>
         
-        <h2>6. Değişiklikler ve Güncellemeler</h2>
-        <p>Bu gizlilik politikası zaman zaman güncellenebilir. Güncellemeler, kullanıcıya uzantı içinde bildirilecektir.</p>
+        <h2 id="section6">6. Changes and Updates</h2>
+        <p id="text6">This privacy policy may be updated periodically. Updates will be notified within the extension.</p>
         
-        <h2>7. İletişim</h2>
-        <p>Gizlilik politikamızla ilgili sorularınız için aşağıdaki adreslerden bizimle iletişime geçebilirsiniz.</p>
-        <p><strong>E-posta:</strong> arifabdusoglu0016@gmail.com</p>
-        <p><strong>Kişisel Web Sitem:</strong> <a href="https://arifabds.github.io/portfolio" target="_blank">https://arifabds.github.io/portfolio</a></p>
-        <p><strong>Eklenti Linki:</strong> <a href="https://chromewebstore.google.com/detail/llm-based-content-generat/cpngfebnonodehhbnjmcjdjhbfjjgikb" target="_blank">LLM Based Content Generator - Chrome Extension</a></p>
-        
+        <h2 id="section7">7. Contact</h2>
+        <p id="text7">For any questions regarding our privacy policy, you can contact us at:</p>
+        <p><strong>Email:</strong> arifabdusoglu0016@gmail.com</p>
+        <p><strong>Personal Website:</strong> <a href="https://arifabds.github.io/portfolio" target="_blank">https://arifabds.github.io/portfolio</a></p>
+        <p><strong>Extension Link:</strong> <a href="https://chromewebstore.google.com/detail/llm-based-content-generat/cpngfebnonodehhbnjmcjdjhbfjjgikb" target="_blank">LLM Based Content Generator - Chrome Extension</a></p>
         
         <div class="footer">
-            <p>© 2025 Tüm Hakları Saklıdır.</p>
+            <p>© 2025 All Rights Reserved.</p>
         </div>
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const langEn = document.getElementById("lang-en");
+            const langTr = document.getElementById("lang-tr");
+            const elements = [
+                { id: "title", en: "Privacy Policy", tr: "Gizlilik Politikası" },
+                { id: "section1", en: "1. What Data Do We Collect?", tr: "1. Hangi Verileri Topluyoruz?" },
+                { id: "text1", en: "Our extension only processes user prompts...", tr: "Uzantımız, yalnızca kullanıcı promptlarını..." },
+                { id: "section2", en: "2. Purpose of Data Usage", tr: "2. Verilerin Kullanım Amacı" },
+                { id: "text2", en: "The collected data is used to generate text...", tr: "Toplanan veriler, kullanıcının belirttiği isteğe göre..." },
+                { id: "footer", en: "© 2025 All Rights Reserved.", tr: "© 2025 Tüm Hakları Saklıdır." }
+            ];
+
+            function toggleLanguage() {
+                document.body.style.opacity = "0";
+                setTimeout(() => {
+                    const isEnglish = langEn.classList.contains("active");
+                    langEn.classList.toggle("active", !isEnglish);
+                    langTr.classList.toggle("active", isEnglish);
+                    elements.forEach(el => {
+                        document.getElementById(el.id).textContent = isEnglish ? el.tr : el.en;
+                    });
+                    document.body.style.opacity = "1";
+                }, 300);
+            }
+
+            langEn.addEventListener("click", toggleLanguage);
+            langTr.addEventListener("click", toggleLanguage);
+        });
+    </script>
 </body>
 </html>
-

@@ -89,9 +89,9 @@
     
     <div class="container">
         <h1 id="title">Welcome to My GitHub Pages</h1>
-        <a id="portfolio" class="link" href="https://arifabds.github.io/portfolio/" target="_blank">📌 Kişisel Portfolyo</a>
-        <a id="extension" class="link" href="https://arifabds.github.io/contentGenerator/" target="_blank">📝 LLM Tabanlı İçerik Üretici</a>
-        <a id="chatbot" class="link" href="https://arifabds.github.io/chatbot/" target="_blank">💬 Web Entegreli Chatbot <span class="maintenance">(Bakımda)</span></a>
+        <a id="portfolio" class="link" href="https://arifabds.github.io/portfolio/" target="_blank">📌 Personal Portfolio</a>
+        <a id="extension" class="link" href="https://arifabds.github.io/contentGenerator/" target="_blank">📝 LLM Based Content Generator</a>
+        <a id="chatbot" class="link" href="https://arifabds.github.io/chatbot/" target="_blank">💬 Web Integrated Chatbot <span id="maintenance" class="maintenance">(Under maintenance)</span></a>
     </div>
     
     <script>
@@ -102,6 +102,8 @@
             const portfolio = document.getElementById("portfolio");
             const extension = document.getElementById("extension");
             const chatbot = document.getElementById("chatbot");
+            const maintenance = document.getElementById("maintenance");
+
 
             function toggleLanguage() {
                 document.body.style.opacity = "0";
@@ -113,6 +115,8 @@
                         portfolio.textContent = "📌 Kişisel Portfolyo";
                         extension.textContent = " 📝LLM Tabanlı İçerik Üretici";
                         chatbot.textContent = "💬 Web Entegreli Chatbot";
+                        maintenance.textContent = "(Bakımda)";
+
 
                     } else {
                         langTr.classList.remove("active");
@@ -121,6 +125,7 @@
                         portfolio.textContent = "📌 Personal Portfolio";
                         extension.textContent = "📝 LLM Based Content Generator";
                         chatbot.textContent = "💬 Web Integrated Chatbot";
+                        maintenance.textContent = "(Under maintenance)";
                     }
                     document.body.style.opacity = "1";
                 }, 300);

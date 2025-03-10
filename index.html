@@ -16,7 +16,6 @@
             background: linear-gradient(135deg, #1e3c72, #2a5298);
             color: white;
             text-align: center;
-            position: relative;
             transition: opacity 0.5s ease-in-out;
         }
         .container {
@@ -25,10 +24,6 @@
             border-radius: 10px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
             backdrop-filter: blur(10px);
-            transition: all 0.5s ease-in-out;
-        }
-        h1, .link {
-            transition: all 0.5s ease-in-out;
         }
         .link {
             display: block;
@@ -44,10 +39,6 @@
         .link:hover {
             background: rgba(255, 255, 255, 0.4);
         }
-        .maintenance {
-            font-size: 14px;
-            color: #ffcc00;
-        }
         .language-switch {
             position: absolute;
             top: 10px;
@@ -62,7 +53,6 @@
             height: 40px;
             justify-content: space-between;
         }
-
         .language-switch div {
             flex: 1;
             text-align: center;
@@ -71,13 +61,12 @@
             cursor: pointer;
             transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
             line-height: 40px;
-            color: black; 
-            background: white; 
+            color: black;
+            background: white;
         }
-
         .language-switch .active {
-            background: #28a745; 
-            color: white; 
+            background: #28a745;
+            color: white;
         }
     </style>
 </head>
@@ -89,50 +78,33 @@
     
     <div class="container">
         <h1 id="title">Welcome to My GitHub Pages</h1>
-        <a id="portfolio" class="link" href="https://arifabds.github.io/portfolio/" target="_blank">📌 Personal Portfolio</a>
-        <a id="extension" class="link" href="https://arifabds.github.io/contentGenerator/" target="_blank">📝 LLM Based Content Generator</a>
-        <a id="chatbot" class="link" href="https://arifabds.github.io/chatbot/" target="_blank">💬 Web Integrated Chatbot <span id="maintenance" class="maintenance">(Under maintenance)</span></a>
+        <a id="portfolio" class="link" href="https://arifabds.github.io/portfolio/" target="_blank"></a>
+        <a id="extension" class="link" href="https://arifabds.github.io/contentGenerator/" target="_blank"></a>
+        <a id="chatbot" class="link" href="https://arifabds.github.io/chatbot/" target="_blank"></a>
     </div>
     
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const langEn = document.getElementById("lang-en");
             const langTr = document.getElementById("lang-tr");
-            const title = document.getElementById("title");
-            const portfolio = document.getElementById("portfolio");
-            const extension = document.getElementById("extension");
-            const chatbot = document.getElementById("chatbot");
-            const maintenance = document.getElementById("maintenance");
 
+            const elements = [
+                { id: "title", en: "Welcome to My GitHub Pages", tr: "GitHub Sayfama Hoş Geldiniz" },
+                { id: "portfolio", en: "📌 Personal Portfolio", tr: "📌 Kişisel Portfolyo" },
+                { id: "extension", en: "📝 LLM Based Content Generator", tr: "📝 LLM Tabanlı İçerik Üretici" },
+                { id: "chatbot", en: "💬 Web Integrated Chatbot (Under maintenance)", tr: "💬 Web Entegreli Chatbot (Bakımda)" }
+            ];
 
             function toggleLanguage() {
-                document.body.style.opacity = "0";
-                setTimeout(() => {
-                    if (langEn.classList.contains("active")) {
-                        langEn.classList.remove("active");
-                        langTr.classList.add("active");
-                        title.textContent = "GitHub Sayfama Hoş Geldiniz";
-                        portfolio.textContent = "📌 Kişisel Portfolyo";
-                        extension.textContent = " 📝LLM Tabanlı İçerik Üretici";
-                        chatbot.textContent = "💬 Web Entegreli Chatbot";
-                        maintenance.textContent = "(Bakımda)";
-
-
-                    } else {
-                        langTr.classList.remove("active");
-                        langEn.classList.add("active");
-                        title.textContent = "GitHub Sayfama Hoş Geldiniz";
-                        portfolio.textContent = "📌 Personal Portfolio";
-                        extension.textContent = "📝 LLM Based Content Generator";
-                        chatbot.textContent = "💬 Web Integrated Chatbot";
-                        maintenance.textContent = "(Under maintenance)";
-                    }
-                    document.body.style.opacity = "1";
-                }, 300);
+                const isEnglish = langEn.classList.contains("active");
+                langEn.classList.toggle("active", !isEnglish);
+                langTr.classList.toggle("active", isEnglish);
+                elements.forEach(el => document.getElementById(el.id).textContent = isEnglish ? el.tr : el.en);
             }
 
             langEn.addEventListener("click", toggleLanguage);
             langTr.addEventListener("click", toggleLanguage);
+            elements.forEach(el => document.getElementById(el.id).textContent = el.en);
         });
     </script>
 </body>

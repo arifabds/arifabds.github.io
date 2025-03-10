@@ -63,7 +63,7 @@
             font-size: 14px;
             opacity: 0.8;
         }
-                .language-switch {
+        .language-switch {
             position: absolute;
             top: 10px;
             right: 20px;
@@ -77,7 +77,6 @@
             height: 40px;
             justify-content: space-between;
         }
-
         .language-switch div {
             flex: 1;
             text-align: center;
@@ -86,16 +85,13 @@
             cursor: pointer;
             transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
             line-height: 40px;
-            color: black; 
-            background: white; 
+            color: black;
+            background: white;
         }
-
         .language-switch .active {
-            background: #28a745; 
-            color: white; 
+            background: #28a745;
+            color: white;
         }
-
-
     </style>
 </head>
 <body>
@@ -124,31 +120,29 @@
         document.addEventListener("DOMContentLoaded", () => {
             const langEn = document.getElementById("lang-en");
             const langTr = document.getElementById("lang-tr");
-            const title = document.getElementById("title");
-            const desc = document.getElementById("description");
-            const appLink = document.getElementById("app-link");
-            const footerText = document.getElementById("footerText");
-            const container = document.querySelector(".container");
+
+            const elements = [
+                { id: "title", en: "Web Integrated Chatbot (Currently under maintenance)", tr: "Web Entegreli Chatbot (Şu anda bakımda)" },
+                { id: "description", en: "This app can search the web given prompt and generate content from several websites.", tr: "Bu uygulama, verilen bir istemi (prompt) alarak internette arama yapabilir ve çeşitli web sitelerinden içerik oluşturabilir." },
+                { id: "app-link", en: "Go to the app!", tr: "Uygulamaya git!" },
+                { id: "footerText", en: "© 2025 All rights reserved.", tr: "© 2025 Tüm Hakları Saklıdır." }
+            ];
 
             function toggleLanguage() {
-                container.style.opacity = "0";
+                document.body.style.opacity = "0.3";
                 setTimeout(() => {
-                    if (langEn.classList.contains("active")) {
-                        langEn.classList.remove("active");
-                        langTr.classList.add("active");
-                        title.textContent = "Web Entegreli Chatbot (Şu anda bakımda)";
-                        appLink.textContent = "Uygulamaya git!";
-                        footerText.textContent = "© 2025 Tüm Hakları Saklıdır.";
-                        desc.textContent = "Bu uygulama, verilen bir istemi (prompt) alarak internette arama yapabilir ve çeşitli web sitelerinden içerik oluşturabilir.";
-                    } else {
-                        langTr.classList.remove("active");
-                        langEn.classList.add("active");
-                        title.textContent = "Web Integrated Chatbot (Currently under maintenance)";
-                        appLink.textContent = "Go to the app!";
-                        footerText.textContent = "© 2025 All rights reserved.";
-                        desc.textContent = "This app can search the web given prompt and generate content from several websites.";
-                    }
-                    container.style.opacity = "1";
+                    const isEnglish = langEn.classList.contains("active");
+                    langEn.classList.toggle("active", !isEnglish);
+                    langTr.classList.toggle("active", isEnglish);
+
+                    elements.forEach(el => {
+                        const element = document.getElementById(el.id);
+                        if (element) {
+                            element.textContent = isEnglish ? el.tr : el.en;
+                        }
+                    });
+
+                    document.body.style.opacity = "1";
                 }, 300);
             }
 

@@ -73,7 +73,7 @@
     
     <div class="container">
         <h1 id="title">Privacy Policy</h1>
-        <p><strong>Last Updated:</strong> 04.03.2025</p>
+        <p id="update"><strong>Last Updated:</strong> 04.03.2025</p>
         
         <h2 id="section1">1. What Data Do We Collect?</h2>
         <p id="text1">Our extension only processes user prompts, model responses, and optionally the page content. These data are temporary and not stored.</p>
@@ -95,9 +95,9 @@
         
         <h2 id="section7">7. Contact</h2>
         <p id="text7">For any questions regarding our privacy policy, you can contact us at:</p>
-        <p><strong>Email:</strong> arifabdusoglu0016@gmail.com</p>
-        <p><strong>Personal Website:</strong> <a href="https://arifabds.github.io/portfolio" target="_blank">https://arifabds.github.io/portfolio</a></p>
-        <p><strong>Extension Link:</strong> <a href="https://chromewebstore.google.com/detail/llm-based-content-generat/cpngfebnonodehhbnjmcjdjhbfjjgikb" target="_blank">LLM Based Content Generator - Chrome Extension</a></p>
+        <p><strong id="emailLabel">Email:</strong> arifabdusoglu0016@gmail.com</p>
+        <p id="website"><strong id="websiteLabel">Personal Website:</strong> <a href="https://arifabds.github.io/portfolio" target="_blank">https://arifabds.github.io/portfolio</a></p>
+        <p id="link"><strong id="linkLabel">Extension Link:</strong> <a href="https://chromewebstore.google.com/detail/llm-based-content-generat/cpngfebnonodehhbnjmcjdjhbfjjgikb" target="_blank">LLM Based Content Generator - Chrome Extension</a></p>
         
         <div id="footer" class="footer">
             <p>© 2025 All Rights Reserved.</p>
@@ -108,34 +108,69 @@
         document.addEventListener("DOMContentLoaded", () => {
             const langEn = document.getElementById("lang-en");
             const langTr = document.getElementById("lang-tr");
-
+    
             const elements = [
                 { id: "title", en: "Privacy Policy", tr: "Gizlilik Politikası" },
+                { id: "update", en: "<strong>Last Updated:</strong> 04.03.2025", tr: "<strong>Son Güncellenme:</strong> 04.03.2025" },
+                
                 { id: "section1", en: "1. What Data Do We Collect?", tr: "1. Hangi Verileri Topluyoruz?" },
                 { id: "text1", en: "Our extension only processes user prompts, model responses, and optionally the page content. These data are temporary and not stored.", 
-                  tr: "Uzantımız, yalnızca kullanıcı promptlarını, model yanıtlarını ve isteğe bağlı olarak sayfa içeriğini işler. Bu veriler geçicidir ve saklanmaz." },
-                { id: "section2", en: "2. Purpose of Data Usage", tr: "2. Verilerin Kullanım Amacı" },
+                  tr: "Eklentimiz yalnızca kullanıcı girdilerini, model yanıtlarını ve isteğe bağlı olarak sayfa içeriğini işler. Bu veriler geçici olup saklanmaz." },
+                
+                { id: "section2", en: "2. Purpose of Data Usage", tr: "2. Veri Kullanım Amacı" },
                 { id: "text2", en: "The collected data is used to generate text based on user requests and to help the model understand the context. It is not shared with third parties.", 
-                  tr: "Toplanan veriler, kullanıcının isteğine göre metin üretmek ve modelin bağlamı anlamasını sağlamak için kullanılır. Üçüncü taraflarla paylaşılmaz." },
+                  tr: "Toplanan veriler, kullanıcı taleplerine dayalı metin oluşturmak ve modelin bağlamı anlamasına yardımcı olmak için kullanılır. Üçüncü şahıslarla paylaşılmaz." },
+                
+                { id: "section3", en: "3. Data Storage and Security", tr: "3. Veri Depolama ve Güvenlik" },
+                { id: "text3", en: "Data is processed only during the session and not stored. All data transfers are encrypted via HTTPS.", 
+                  tr: "Veriler yalnızca oturum sırasında işlenir ve saklanmaz. Tüm veri transferleri HTTPS ile şifrelenir." },
+                
+                { id: "section4", en: "4. User Rights and Choices", tr: "4. Kullanıcı Hakları ve Seçimler" },
+                { id: "text4", en: "Users who do not want their prompts to be processed by the model may refrain from using the extension.", 
+                  tr: "Model tarafından girdilerinin işlenmesini istemeyen kullanıcılar eklentiyi kullanmaktan kaçınabilir." },
+                
+                { id: "section5", en: "5. Third-Party Services", tr: "5. Üçüncü Taraf Hizmetleri" },
+                { id: "text5", en: "The extension only uses GroqCloud API and does not share data with any other services.", 
+                  tr: "Eklenti yalnızca GroqCloud API'sini kullanır ve verileri başka hiçbir hizmetle paylaşmaz." },
+                
+                { id: "section6", en: "6. Changes and Updates", tr: "6. Değişiklikler ve Güncellemeler" },
+                { id: "text6", en: "This privacy policy may be updated periodically. Updates will be notified within the extension.", 
+                  tr: "Bu gizlilik politikası periyodik olarak güncellenebilir. Güncellemeler eklenti içinde bildirilecektir." },
+                
+                { id: "section7", en: "7. Contact", tr: "7. İletişim" },
+                { id: "text7", en: "For any questions regarding our privacy policy, you can contact us at:", 
+                  tr: "Gizlilik politikamızla ilgili her türlü sorunuz için bize şu adresten ulaşabilirsiniz:" },
+                
+                { id: "emailLabel", en: "Email:", tr: "E-posta:" },
+                { id: "websiteLabel", en: "Personal Website:", tr: "Kişisel Web Sitesi:" },
+                { id: "linkLabel", en: "Extension Link:", tr: "Eklenti Bağlantısı:" },
+                
                 { id: "footer", en: "© 2025 All Rights Reserved.", tr: "© 2025 Tüm Hakları Saklıdır." }
             ];
-
+    
             function toggleLanguage() {
                 document.body.style.opacity = "0.3";
                 setTimeout(() => {
                     const isEnglish = langEn.classList.contains("active");
                     langEn.classList.toggle("active", !isEnglish);
                     langTr.classList.toggle("active", isEnglish);
+                    
                     elements.forEach(el => {
                         const element = document.getElementById(el.id);
                         if (element) {
-                            element.innerHTML = isEnglish ? el.tr : el.en;
+                            if(el.id === "emailLabel" || el.id === "websiteLabel" || el.id === "linkLabel") {
+                                // Özel durum: strong etiketlerinin içeriğini değiştir
+                                element.querySelector("strong").textContent = isEnglish ? el.tr : el.en;
+                            } else {
+                                // Normal içerik değiştirme
+                                element.innerHTML = isEnglish ? el.tr : el.en;
+                            }
                         }
                     });
                     document.body.style.opacity = "1";
                 }, 300);
             }
-
+    
             langEn.addEventListener("click", toggleLanguage);
             langTr.addEventListener("click", toggleLanguage);
         });

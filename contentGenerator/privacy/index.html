@@ -159,10 +159,8 @@
                         const element = document.getElementById(el.id);
                         if (element) {
                             if(el.id === "emailLabel" || el.id === "websiteLabel" || el.id === "linkLabel") {
-                                // Özel durum: strong etiketlerinin içeriğini değiştir
                                 element.querySelector("strong").textContent = isEnglish ? el.tr : el.en;
                             } else {
-                                // Normal içerik değiştirme
                                 element.innerHTML = isEnglish ? el.tr : el.en;
                             }
                         }

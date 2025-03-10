@@ -87,25 +87,35 @@
         document.addEventListener("DOMContentLoaded", () => {
             const langEn = document.getElementById("lang-en");
             const langTr = document.getElementById("lang-tr");
-
+    
             const elements = [
                 { id: "title", en: "Welcome to My GitHub Pages", tr: "GitHub Sayfama Hoş Geldiniz" },
                 { id: "portfolio", en: "📌 Personal Portfolio", tr: "📌 Kişisel Portfolyo" },
                 { id: "extension", en: "📝 LLM Based Content Generator", tr: "📝 LLM Tabanlı İçerik Üretici" },
                 { id: "chatbot", en: "💬 Web Integrated Chatbot (Under maintenance)", tr: "💬 Web Entegreli Chatbot (Bakımda)" }
             ];
-
+    
             function toggleLanguage() {
-                const isEnglish = langEn.classList.contains("active");
-                langEn.classList.toggle("active", !isEnglish);
-                langTr.classList.toggle("active", isEnglish);
-                elements.forEach(el => document.getElementById(el.id).textContent = isEnglish ? el.tr : el.en);
+                document.body.style.opacity = "0.3"; 
+                setTimeout(() => {
+                    const isEnglish = langEn.classList.contains("active");
+                    langEn.classList.toggle("active", !isEnglish);
+                    langTr.classList.toggle("active", isEnglish);
+                    
+                    elements.forEach(el => {
+                        document.getElementById(el.id).textContent = isEnglish ? el.tr : el.en;
+                    });
+    
+                    document.body.style.opacity = "1"; 
+                }, 300); 
             }
-
+    
             langEn.addEventListener("click", toggleLanguage);
             langTr.addEventListener("click", toggleLanguage);
+            
             elements.forEach(el => document.getElementById(el.id).textContent = el.en);
         });
     </script>
+    
 </body>
 </html>

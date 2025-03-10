@@ -77,7 +77,6 @@
             height: 40px;
             justify-content: space-between;
         }
-
         .language-switch div {
             flex: 1;
             text-align: center;
@@ -86,13 +85,12 @@
             cursor: pointer;
             transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
             line-height: 40px;
-            color: black; 
-            background: white; 
+            color: black;
+            background: white;
         }
-
         .language-switch .active {
-            background: #28a745; 
-            color: white; 
+            background: #28a745;
+            color: white;
         }
     </style>
 </head>
@@ -127,37 +125,31 @@
         document.addEventListener("DOMContentLoaded", () => {
             const langEn = document.getElementById("lang-en");
             const langTr = document.getElementById("lang-tr");
-            const title = document.getElementById("title");
-            const desc = document.getElementById("description");
-            const chromeLink = document.getElementById("chrome-link");
-            const footerText = document.getElementById("footerText");
-            const privacy = document.getElementById("privacy");
-            const terms = document.getElementById("terms");
 
+            const elements = [
+                { id: "title", en: "LLM-Based Content Generator", tr: "LLM Tabanlı İçerik Üretici" },
+                { id: "description", en: "This extension generates the desired type of descriptions using an LLM (Large Language Model) based on the content of a website.", 
+                                        tr: "Bu uygulama URL'deki veya direkt sitenin içeriğindeki bilgileri, kullanıcı isteğine göre değerlendirerek yapay zeka destekli bir içerik üretimi sağlar." },
+                { id: "chrome-link", en: "🔗 Download Chrome Extension", tr: "🔗 Chrome Eklentisini Yükle" },
+                { id: "terms", en: "📜 Terms & Conditions", tr: "📜 Kullanım Şartları" },
+                { id: "privacy", en: "🔏 Privacy Policy", tr: "🔏 Gizlilik Politikası" },
+                { id: "footerText", en: "© 2025 All rights reserved.", tr: "© 2025 Tüm Hakları Saklıdır." }
+            ];
 
             function toggleLanguage() {
-                document.body.style.opacity = "0";
+                document.body.style.opacity = "0.3";
                 setTimeout(() => {
-                    if (langEn.classList.contains("active")) {
-                        langEn.classList.remove("active");
-                        langTr.classList.add("active");
-                        title.textContent = "LLM Tabanlı İçerik Üretici";
-                        desc.textContent = "Bu uygulama URL'deki veya direkt sitenin içeriğindeki bilgileri, kullanıcı isteğine göre değerlendirerek yapay zeka destekli bir içerik üretimi sağlar.";
-                        chromeLink.textContent = "🔗 Chrome Eklentisini Yükle";
-                        footerText.textContent = "© 2025 Tüm Hakları Saklıdır.";
-                        privacy.textContent = "🔏 Gizlilik Politikası"
-                        terms.textContent = "📜 Kullanım Şartları"
+                    const isEnglish = langEn.classList.contains("active");
+                    langEn.classList.toggle("active", !isEnglish);
+                    langTr.classList.toggle("active", isEnglish);
 
-                    } else {
-                        langTr.classList.remove("active");
-                        langEn.classList.add("active");
-                        title.textContent = "LLM-Based Content Generator";
-                        desc.textContent = "This extension generates the desired type of descriptions using an LLM (Large Language Model) based on the content of a website.";
-                        chromeLink.textContent = "🔗 Download Chrome Extension";
-                        footerText.textContent = "© 2025 All rights reserved.";
-                        privacy.textContent = "🔏 Privacy Policy"
-                        terms.textContent = "📜 Terms & Condition"
-                    }
+                    elements.forEach(el => {
+                        const element = document.getElementById(el.id);
+                        if (element) {
+                            element.textContent = isEnglish ? el.tr : el.en;
+                        }
+                    });
+
                     document.body.style.opacity = "1";
                 }, 300);
             }

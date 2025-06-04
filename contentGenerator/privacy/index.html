@@ -1,176 +1,153 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-            padding: 20px;
-            background-color: #f9f9f9;
-            text-align: center;
-            transition: opacity 0.5s ease-in-out;
-        }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h1, h2 {
-            color: #333;
-        }
-        p {
-            color: #555;
-        }
-        .footer {
-            margin-top: 20px;
-            font-size: 14px;
-            text-align: center;
-            color: #777;
-        }
-        .language-switch {
-            position: absolute;
-            top: 10px;
-            right: 20px;
-            display: flex;
-            align-items: center;
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            border: 2px solid #ccc;
-            width: 100px;
-            height: 40px;
-            justify-content: space-between;
-        }
-        .language-switch div {
-            flex: 1;
-            text-align: center;
-            font-size: 14px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
-            line-height: 40px;
-            color: black;
-            background: white;
-        }
-        .language-switch .active {
-            background: #28a745;
-            color: white;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+    .container {
+      max-width: 850px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      color: #333;
+    }
+    p {
+      color: #444;
+      text-align: justify;
+    }
+    .language-switch {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      display: flex;
+      background: white;
+      border: 2px solid #ccc;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+    .language-switch div {
+      flex: 1;
+      padding: 10px 15px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .language-switch .active {
+      background: #28a745;
+      color: white;
+    }
+    .footer {
+      margin-top: 30px;
+      font-size: 14px;
+      color: #777;
+    }
+  </style>
 </head>
 <body>
-    <div class="language-switch">
-        <div id="lang-tr">TR</div>
-        <div id="lang-en" class="active">EN</div>
-    </div>
-    
-    <div class="container">
-        <h1 id="title">Privacy Policy</h1>
-        <p id="update"><strong>Last Updated:</strong> 04.03.2025</p>
-        
-        <h2 id="section1">1. What Data Do We Collect?</h2>
-        <p id="text1">Our extension only processes user prompts, model responses, and optionally the page content. These data are temporary and not stored.</p>
-        
-        <h2 id="section2">2. Purpose of Data Usage</h2>
-        <p id="text2">The collected data is used to generate text based on user requests and to help the model understand the context. It is not shared with third parties.</p>
-        
-        <h2 id="section3">3. Data Storage and Security</h2>
-        <p id="text3">Data is processed only during the session and not stored. All data transfers are encrypted via HTTPS.</p>
-        
-        <h2 id="section4">4. User Rights and Choices</h2>
-        <p id="text4">Users who do not want their prompts to be processed by the model may refrain from using the extension.</p>
-        
-        <h2 id="section5">5. Third-Party Services</h2>
-        <p id="text5">The extension only uses GroqCloud API and does not share data with any other services.</p>
-        
-        <h2 id="section6">6. Changes and Updates</h2>
-        <p id="text6">This privacy policy may be updated periodically. Updates will be notified within the extension.</p>
-        
-        <h2 id="section7">7. Contact</h2>
-        <p id="text7">For any questions regarding our privacy policy, you can contact us at:</p>
-        <p><strong id="emailLabel">Email:</strong> arifabdusoglu0016@gmail.com</p>
-        <p id="website"><strong id="websiteLabel">Personal Website:</strong> <a href="https://arifabds.github.io/portfolio" target="_blank">https://arifabds.github.io/portfolio</a></p>
-        <p id="link"><strong id="linkLabel">Extension Link:</strong> <a href="https://chromewebstore.google.com/detail/llm-based-content-generat/cpngfebnonodehhbnjmcjdjhbfjjgikb" target="_blank">LLM Based Content Generator - Chrome Extension</a></p>
-        
-        <div id="footer" class="footer">
-            <p>© 2025 All Rights Reserved.</p>
-        </div>
-    </div>
 
-    <script>
-            document.addEventListener("DOMContentLoaded", () => {
-            const langEn = document.getElementById("lang-en");
-            const langTr = document.getElementById("lang-tr");
+  <div class="language-switch">
+    <div id="lang-tr">TR</div>
+    <div id="lang-en" class="active">EN</div>
+  </div>
 
-            const elements = [
-                { id: "title", en: "Privacy Policy", tr: "Gizlilik Politikası" },
-                { id: "update", en: "<strong>Last Updated:</strong> 04.03.2025", tr: "<strong>Son Güncellenme:</strong> 04.03.2025" },
+  <div class="container">
+    <h1 id="title">Privacy Policy</h1>
+    <p id="update"><strong>Last Updated:</strong> 04.06.2025</p>
 
-                { id: "section1", en: "1. What Data Do We Collect?", tr: "1. Hangi Verileri Topluyoruz?" },
-                { id: "text1", en: "Our extension only processes user prompts, model responses, and optionally the page content. These data are temporary and not stored.", 
-                tr: "Eklentimiz yalnızca kullanıcı girdilerini, model yanıtlarını ve isteğe bağlı olarak sayfa içeriğini işler. Bu veriler geçici olup saklanmaz." },
+    <h2 id="section1">1. What Data Do We Collect?</h2>
+    <p id="text1">We collect only necessary information such as user prompts, model responses, and page content. If you register, we also store your login email and hashed password for authentication purposes.</p>
 
-                { id: "section2", en: "2. Purpose of Data Usage", tr: "2. Veri Kullanım Amacı" },
-                { id: "text2", en: "The collected data is used to generate text based on user requests and to help the model understand the context. It is not shared with third parties.", 
-                tr: "Toplanan veriler, kullanıcı taleplerine dayalı metin oluşturmak ve modelin bağlamı anlamasına yardımcı olmak için kullanılır. Üçüncü şahıslarla paylaşılmaz." },
+    <h2 id="section2">2. Purpose of Data Usage</h2>
+    <p id="text2">Collected data is used to generate meaningful content based on your input. If you register, your previous queries and generated responses will be stored for personal access and history tracking. We do not share your data with any third parties.</p>
 
-                { id: "section3", en: "3. Data Storage and Security", tr: "3. Veri Depolama ve Güvenlik" },
-                { id: "text3", en: "Data is processed only during the session and not stored. All data transfers are encrypted via HTTPS.", 
-                tr: "Veriler yalnızca oturum sırasında işlenir ve saklanmaz. Tüm veri transferleri HTTPS ile şifrelenir." },
+    <h2 id="section3">3. Data Storage and Security</h2>
+    <p id="text3">All data is transferred securely using HTTPS. For registered users, data is securely stored in a cloud database (Supabase). Passwords are hashed using bcrypt and never stored in plain text.</p>
 
-                { id: "section4", en: "4. User Rights and Choices", tr: "4. Kullanıcı Hakları ve Seçimler" },
-                { id: "text4", en: "Users who do not want their prompts to be processed by the model may refrain from using the extension.", 
-                tr: "Model tarafından girdilerinin işlenmesini istemeyen kullanıcılar eklentiyi kullanmaktan kaçınabilir." },
+    <h2 id="section4">4. User Rights and Choices</h2>
+    <p id="text4">You may choose not to register and use the extension without storing any information. Registered users may contact us anytime to delete their data.</p>
 
-                { id: "section5", en: "5. Third-Party Services", tr: "5. Üçüncü Taraf Hizmetleri" },
-                { id: "text5", en: "The extension only uses GroqCloud API and does not share data with any other services.", 
-                tr: "Eklenti yalnızca GroqCloud API'sini kullanır ve verileri başka hiçbir hizmetle paylaşmaz." },
+    <h2 id="section5">5. Third-Party Services</h2>
+    <p id="text5">We use GroqCloud and HuggingFace APIs to generate responses. No personal data is shared with these services beyond the required prompts.</p>
 
-                { id: "section6", en: "6. Changes and Updates", tr: "6. Değişiklikler ve Güncellemeler" },
-                { id: "text6", en: "This privacy policy may be updated periodically. Updates will be notified within the extension.", 
-                tr: "Bu gizlilik politikası periyodik olarak güncellenebilir. Güncellemeler eklenti içinde bildirilecektir." },
+    <h2 id="section6">6. Changes and Updates</h2>
+    <p id="text6">We may update this policy from time to time. All changes will be reflected on this page and optionally shown inside the extension.</p>
 
-                { id: "section7", en: "7. Contact", tr: "7. İletişim" },
-                { id: "text7", en: "For any questions regarding our privacy policy, you can contact us at:", 
-                tr: "Gizlilik politikamızla ilgili her türlü sorunuz için bize şu adresten ulaşabilirsiniz:" },
+    <h2 id="section7">7. Contact</h2>
+    <p id="text7">For any questions or data removal requests, please contact:</p>
+    <p><strong>Email:</strong> arifabdusoglu0016@gmail.com</p>
+    <p><strong>Website:</strong> <a href="https://arifabds.github.io/portfolio" target="_blank">https://arifabds.github.io/portfolio</a></p>
+    <p><strong>Extension:</strong> <a href="https://chromewebstore.google.com/detail/llm-based-content-generat/cpngfebnonodehhbnjmcjdjhbfjjgikb" target="_blank">LLM Based Content Generator</a></p>
 
-                { id: "emailLabel", en: "<strong>Email:</strong>", tr: "<strong>E-posta:</strong>" },
-                { id: "website", en: "<strong>Personal Website:</strong> <a href='https://arifabds.github.io/portfolio' target='_blank'>https://arifabds.github.io/portfolio</a>", 
-                tr: "<strong>Kişisel Web Sitesi:</strong> <a href='https://arifabds.github.io/portfolio' target='_blank'>https://arifabds.github.io/portfolio</a>" },
-                { id: "link", en: "<strong>Extension Link:</strong> <a href='https://chromewebstore.google.com/detail/llm-based-content-generat/cpngfebnonodehhbnjmcjdjhbfjjgikb' target='_blank'>LLM Based Content Generator - Chrome Extension</a>", 
-                tr: "<strong>Eklenti Bağlantısı:</strong> <a href='https://chromewebstore.google.com/detail/llm-based-content-generat/cpngfebnonodehhbnjmcjdjhbfjjgikb' target='_blank'>LLM Tabanlı İçerik Üretici - Chrome Eklentisi</a>" },
+    <div class="footer" id="footer">© 2025 All rights reserved.</div>
+  </div>
 
-                { id: "footer", en: "© 2025 All Rights Reserved.", tr: "© 2025 Tüm Hakları Saklıdır." }
-            ];
+  <script>
+    const elements = {
+      title: ["Gizlilik Politikası", "Privacy Policy"],
+      update: ["<strong>Son Güncelleme:</strong> 04.06.2025", "<strong>Last Updated:</strong> 04.06.2025"],
+      section1: ["1. Hangi Verileri Topluyoruz?", "1. What Data Do We Collect?"],
+      text1: [
+        "Yalnızca gerekli veriler (kullanıcı komutu, model yanıtı, sayfa içeriği) işlenir. Eğer kayıt olursanız, giriş e-posta adresiniz ve şifrenizin hashlenmiş hali kimlik doğrulama için saklanır.",
+        "We collect only necessary information such as user prompts, model responses, and page content. If you register, we also store your login email and hashed password for authentication purposes."
+      ],
+      section2: ["2. Veri Kullanım Amacı", "2. Purpose of Data Usage"],
+      text2: [
+        "Toplanan veriler, kullanıcı girdilerine dayalı içerik üretmek için kullanılır. Kayıt olmanız durumunda, geçmiş sorgularınıza ve yanıtlarınıza sadece sizin erişebileceğiniz şekilde saklanır. Veriler hiçbir üçüncü tarafla paylaşılmaz.",
+        "Collected data is used to generate meaningful content based on your input. If you register, your previous queries and generated responses will be stored for personal access and history tracking. We do not share your data with any third parties."
+      ],
+      section3: ["3. Veri Güvenliği ve Saklama", "3. Data Storage and Security"],
+      text3: [
+        "Veriler HTTPS üzerinden güvenli şekilde aktarılır. Kayıtlı kullanıcıların verileri Supabase üzerinde güvenli biçimde saklanır. Şifreler bcrypt ile hashlenir, açık olarak kaydedilmez.",
+        "All data is transferred securely using HTTPS. For registered users, data is securely stored in a cloud database (Supabase). Passwords are hashed using bcrypt and never stored in plain text."
+      ],
+      section4: ["4. Kullanıcı Hakları", "4. User Rights and Choices"],
+      text4: [
+        "Kayıt olmadan eklentiyi kullanabilirsiniz ve hiçbir veriniz kaydedilmez. Kayıtlı kullanıcılar verilerinin silinmesini talep edebilir.",
+        "You may choose not to register and use the extension without storing any information. Registered users may contact us anytime to delete their data."
+      ],
+      section5: ["5. Üçüncü Taraf Hizmetler", "5. Third-Party Services"],
+      text5: [
+        "GroqCloud ve HuggingFace API'leri kullanılmaktadır. Bu servislerle yalnızca gerekli prompt verileri paylaşılır, kişisel veri gönderilmez.",
+        "We use GroqCloud and HuggingFace APIs to generate responses. No personal data is shared with these services beyond the required prompts."
+      ],
+      section6: ["6. Değişiklikler ve Güncellemeler", "6. Changes and Updates"],
+      text6: [
+        "Politikamız zamanla güncellenebilir. Değişiklikler bu sayfada yansıtılır ve eklenti içinde bildirilebilir.",
+        "We may update this policy from time to time. All changes will be reflected on this page and optionally shown inside the extension."
+      ],
+      section7: ["7. İletişim", "7. Contact"],
+      text7: [
+        "Her türlü sorunuz veya veri silme talepleriniz için:",
+        "For any questions or data removal requests, please contact:"
+      ],
+      footer: ["© 2025 Tüm Hakları Saklıdır.", "© 2025 All rights reserved."]
+    };
 
-            function toggleLanguage() {
-                document.body.style.opacity = "0";
-                setTimeout(() => {
-                    const isEnglish = langEn.classList.contains("active");
-                    langEn.classList.toggle("active", !isEnglish);
-                    langTr.classList.toggle("active", isEnglish);
-                    
-                    elements.forEach(el => {
-                        const element = document.getElementById(el.id);
-                        if (element) {
-                            element.innerHTML = isEnglish ? el.tr : el.en;
-                        }
-                    });
+    const langTr = document.getElementById("lang-tr");
+    const langEn = document.getElementById("lang-en");
 
-                    document.body.style.opacity = "1";
-                }, 300);
-            }
+    langTr.onclick = () => toggleLang("tr");
+    langEn.onclick = () => toggleLang("en");
 
-            langEn.addEventListener("click", toggleLanguage);
-            langTr.addEventListener("click", toggleLanguage);
-        });
-    </script>
+    function toggleLang(lang) {
+      for (let id in elements) {
+        document.getElementById(id).innerHTML = lang === "tr" ? elements[id][0] : elements[id][1];
+      }
+      langTr.classList.toggle("active", lang === "tr");
+      langEn.classList.toggle("active", lang === "en");
+    }
+  </script>
+
 </body>
 </html>
